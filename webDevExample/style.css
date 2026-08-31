@@ -1,0 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+#header {
+    background-color: #ad7dc3;
+    color: white;
+    padding: 30px;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header > img {
+    width: 120px;
+}
