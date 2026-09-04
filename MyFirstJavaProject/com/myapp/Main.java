@@ -1,24 +1,46 @@
 package com.myapp;
-import java.util.Scanner;
 
 public class Main {
+
+    // 1. Create our own custom exception
+    static class InsufficientFundsException extends Exception {
+
+        public InsufficientFundsException(String message) {
+            super(message);
+        }
+    }
+
+    // 2. Method that can throw our custom exception
+    public static void withdraw(double balance, double amount)
+            throws InsufficientFundsException {
+
+        if (amount > balance) {
+            throw new InsufficientFundsException(
+                "Not enough money. Your balance is $" + balance
+            );
+        }
+
+        System.out.println(
+            "Withdrawal successful. Remaining balance: $"
+            + (balance - amount)
+        );
+    }
+
+    // 3. Main method
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        double balance = 1000.00;
 
-        System.out.print("Enter your name: ");
-        String name = sc.nextLine();
+        try {
+            System.out.println("Current balance: $" + balance);
 
-        System.out.print("Enter your age: ");
-        int age = sc.nextInt();
+            withdraw(balance, 1200.00);
+        }
+        catch (InsufficientFundsException e) {
+            System.out.println("Withdrawal failed.");
+            System.out.println(e.getMessage());
+        }
 
-        System.out.print("Enter your height: ");
-        double height = sc.nextDouble();
-
-        System.out.println("Name: " + name);
-        System.out.println("Age: " + age);
-        System.out.println("Height: " + height);
-
-        sc.close();
+        System.out.println("Program finished.");
     }
 }
