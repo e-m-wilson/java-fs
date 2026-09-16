@@ -45,3 +45,17 @@ As you build, keep these "Gold Standards" in mind:
     *   **Security First:** If the database crashes, do **not** show the user a scary technical stack trace. Instead, log the technical error and show the user a polite "Service Unavailable" type message.
 
 **Good luck, and happy coding!**
+
+
+## Grading Rubric
+| Rubric Item | What to Look For | Weight |
+|---|---|---:|
+| **Multilayered Application** | Application demonstrates a clear multilayer architecture (e.g., presentation/UI, business/service layer, data/access layer) with appropriate separation of concerns. | **15%** |
+| **Account Management Feature** | Users can create and sign into bank accounts with their ID and pin. | **10%** |
+| **Check Account Balance** | Users can view the current balance of their account(s), with accurate values displayed. | **10%** |
+| **Withdraw & Deposit Funds** | Users can successfully deposit and withdraw funds, with account balances updated appropriately. | **15%** |
+| **Transfer Funds Between Accounts** | Users can transfer funds from one account to another, with appropriate balance updates and validation. | **15%** |
+| **View Transaction History** | Users can view a history of transactions. | **10%** |
+| **Logging: Info & Error Messages** | Demonstrates at least one **INFO** message and one **ERROR** message written to a log. Messages should be meaningful and demonstrate appropriate logging practices. | **10%** |
+| **Testing: Positive & Negative Tests** | Demonstrates at least one **positive test** and one **negative test**, and both tests must pass. Tests should meaningfully validate application behavior. | **15%** |
+| **Total** | | **100%** |
