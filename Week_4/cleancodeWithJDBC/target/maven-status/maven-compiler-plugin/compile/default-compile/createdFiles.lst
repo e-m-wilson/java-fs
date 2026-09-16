@@ -1,4 +1,5 @@
 com\cleancode\persistence\StudentDAOImpl.class
+com\cleancode\persistence\ConnectionFactory.class
 com\cleancode\service\StudentService.class
 com\cleancode\api\Main.class
 com\cleancode\api\StudentRepl.class
