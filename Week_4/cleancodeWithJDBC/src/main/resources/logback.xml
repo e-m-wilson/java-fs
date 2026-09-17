@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Potential log levels (how we would call them in a serivce): 
+logger.trace("Entering calculateTotal()");
+logger.debug("Cart contains {} items", itemCount);
+logger.info("Order {} was created", orderId);
+logger.warn("Payment attempt took {} ms", duration);
+logger.error("Unable to process order {}", orderId);
+ -->
+
+<configuration>
+
+    <!-- THIS is only if we want to log to the console and nothing else 
+        <appender name="CONSOLE"
+              class="ch.qos.logback.core.ConsoleAppender"> -->
+
+    <!-- 
+        With the following file appender setup, we are generating a new application.log file for the current day
+        When a new day rolls over, we will get a new application.log and the previous one will be renamed 
+        with its date. i.e. 'application.2026-09-17.log'
+     -->
+    <appender name="FILE"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+
+        <file>logs/application.log</file>
+
+        <rollingPolicy
+            class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+
+            <fileNamePattern>
+                logs/application.%d{yyyy-MM-dd}.log
+            </fileNamePattern>
+
+            <maxHistory>30</maxHistory>
+
+        </rollingPolicy>
+
+        <!-- The following determines log output for each line
+                %d              timestamp
+                %-5level        log level
+                %thread         thread
+                %logger         logger/class
+                %msg            message
+                %n              newline
+        -->
+        <encoder>
+            <pattern>
+                %d{yyyy-MM-dd HH:mm:ss} %-5level [%thread] %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+
+    </appender>
+
+    <!-- service layer only at debug -->
+    <logger name="com.cleancode.service" level="DEBUG"/>
+    <!-- all other layers at INFO log level  -->
+    <root level="INFO">
+        <!-- <appender-ref ref="CONSOLE"/> -->
+        <appender-ref ref="FILE"/>
+    </root>
+
+</configuration>
