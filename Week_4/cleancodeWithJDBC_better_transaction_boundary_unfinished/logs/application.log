@@ -1,0 +1,4 @@
+2026-09-17 11:16:27 WARN  [com.cleancode.api.Main.main()] c.c.service.StudentServiceImpl - Student ID: 1 already exists!
+2026-09-17 11:16:29 INFO  [com.cleancode.api.Main.main()] c.c.service.StudentServiceImpl - Finding student with ID:1
+2026-09-17 13:51:13 WARN  [com.cleancode.api.Main.main()] c.c.service.StudentServiceImpl - Student ID: 1 already exists!
+2026-09-17 13:51:23 INFO  [com.cleancode.api.Main.main()] c.c.service.StudentServiceImpl - Finding student with ID:1
