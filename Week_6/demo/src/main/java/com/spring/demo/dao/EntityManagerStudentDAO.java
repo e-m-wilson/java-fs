@@ -34,4 +34,23 @@ public class EntityManagerStudentDAO implements StudentDAO {
     public Student findById(int id) {
         return entityManager.find(Student.class, id);
     }
+
+    @Override 
+    public void delete(Student student) {
+        entityManager.remove(student);
+    }
+
+    @Override 
+    public List<Student> findByLastName(String lastName) {
+
+        TypedQuery<Student> query = entityManager.createQuery(
+            "SELECT student FROM Student student " + 
+            "WHERE student.lastName = :lastName " + 
+            "ORDER BY student.firstName", Student.class);   
+        
+        query.setParameter("lastName", lastName);
+
+        return query.getResultList();
+
+    }
 }

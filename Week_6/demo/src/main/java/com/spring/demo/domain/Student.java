@@ -7,7 +7,9 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity 
 @Table(name="student")
@@ -25,9 +27,11 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Size(max=20)
     @Column(name="first_name", length = 45)
     private String firstName;
 
+    @Size(max=20)
     @Column(name="last_name", length = 45)
     private String lastName;
 
@@ -35,9 +39,9 @@ public class Student {
     // @NotNull
     // @NotBlank
     // @NotEmpty
-    // @Size
-    // @Min
-    // @Max
+    // @Size - for strings
+    // @Min - for numbers 
+    // @Max - for numbers 
     // @Positive
     // @PositiveOrZero
     // @Email
