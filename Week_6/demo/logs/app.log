@@ -17849,3 +17849,44 @@ Caused by: java.lang.Error: Unresolved compilation problems:
 2026-09-30T14:40:51.804-05:00  INFO 29616 --- [demo] [Thread-1283] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-09-30T14:40:51.804-05:00  INFO 29616 --- [demo] [Thread-1283] com.zaxxer.hikari.HikariDataSource       : HikariPool-346 - Shutdown initiated...
 2026-09-30T14:40:51.807-05:00  INFO 29616 --- [demo] [Thread-1283] com.zaxxer.hikari.HikariDataSource       : HikariPool-346 - Shutdown completed.
+2026-09-30T14:40:53.673-05:00  INFO 29616 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-09-30T14:40:53.807-05:00  INFO 29616 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2026-09-30T14:40:54.439-05:00  INFO 29616 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-09-30T14:40:54.440-05:00  INFO 29616 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-09-30T14:40:54.440-05:00  INFO 29616 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-09-30T14:40:54.474-05:00  INFO 29616 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2032 ms
+2026-09-30T14:40:54.675-05:00  INFO 29616 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-09-30T14:40:54.747-05:00  INFO 29616 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-09-30T14:40:54.749-05:00  INFO 29616 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-347 - Starting...
+2026-09-30T14:40:54.803-05:00  INFO 29616 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-347 - Added connection org.postgresql.jdbc.PgConnection@d2a0856
+2026-09-30T14:40:54.805-05:00  INFO 29616 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-347 - Start completed.
+2026-09-30T14:40:55.119-05:00  INFO 29616 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-09-30T14:40:55.207-05:00  INFO 29616 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-09-30T14:40:55.450-05:00  INFO 29616 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-09-30T14:40:55.749-05:00  WARN 29616 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-09-30T14:40:56.471-05:00  INFO 29616 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-09-30T14:40:56.785-05:00  INFO 29616 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-09-30T14:40:56.830-05:00  INFO 29616 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-09-30T14:41:16.957-05:00  INFO 29616 --- [demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat-98].[localhost].[/]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-09-30T14:41:17.003-05:00  INFO 29616 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-09-30T14:41:17.089-05:00  INFO 29616 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2026-09-30T14:41:29.030-05:00  WARN 29616 --- [demo] [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.spring.demo.exceptions.StudentNotFoundException: Student not found with id: 3434343]
+2026-09-30T14:41:45.197-05:00  WARN 29616 --- [demo] [http-nio-8080-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.spring.demo.exceptions.StudentNotFoundException: Student not found with id: 3434343]
+2026-09-30T14:42:24.772-05:00  WARN 29616 --- [demo] [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.spring.demo.domain.Student> com.spring.demo.rest.StudentController.insertStudent(com.spring.demo.domain.Student) with 2 errors: [Field error in object 'student' on field 'lastName': rejected value [fdafffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff]; codes [Size.student.lastName,Size.lastName,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.lastName,lastName]; arguments []; default message [lastName],20,0]; default message [size must be between 0 and 20]] [Field error in object 'student' on field 'email': rejected value [test34]; codes [Email.student.email,Email.email,Email.java.lang.String,Email]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [student.email,email]; arguments []; default message [email],[Ljakarta.validation.constraints.Pattern$Flag;@3bb967a1,.*]; default message [must be a well-formed email address]] ]
+2026-09-30T14:43:19.422-05:00  WARN 29616 --- [demo] [http-nio-8080-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Method parameter 'id': Failed to convert value of type 'java.lang.String' to required type 'int'; For input string: "13454545454"]
+2026-09-30T15:02:13.373-05:00  INFO 29616 --- [demo] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-09-30T15:02:14.386-05:00  INFO 29616 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-09-30T15:02:14.392-05:00  INFO 29616 --- [demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-09-30T15:02:14.407-05:00  INFO 29616 --- [demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-347 - Shutdown initiated...
+2026-09-30T15:02:14.419-05:00  INFO 29616 --- [demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-347 - Shutdown completed.
