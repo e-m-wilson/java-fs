@@ -32491,3 +32491,1341 @@ Consider defining a bean of type 'com.spring.demo.persistence.SchoolRepository' 
 2026-10-02T15:22:40.889-05:00  INFO 23020 --- [demo] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-10-02T15:22:40.892-05:00  INFO 23020 --- [demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-10-02T15:22:40.900-05:00  INFO 23020 --- [demo] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T15:41:10.396-05:00  INFO 37104 --- [demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-02T15:41:10.400-05:00  INFO 37104 --- [demo] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-02T15:41:11.234-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:41:11.301-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 57 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:41:11.871-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:41:11.890-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:41:11.894-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:41:11.941-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1541 ms
+2026-10-02T15:41:12.180-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:41:12.231-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-02T15:41:12.638-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:41:12.670-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-10-02T15:41:12.823-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@692440fb
+2026-10-02T15:41:12.825-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-10-02T15:41:12.895-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:41:13.943-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:41:14.037-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:41:14.115-05:00  INFO 37104 --- [demo] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-10-02T15:41:14.372-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:41:14.833-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:41:14.908-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:41:23.162-05:00  INFO 37104 --- [demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T15:41:23.163-05:00  INFO 37104 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T15:41:23.165-05:00  INFO 37104 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-10-02T15:44:39.252-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:44:39.260-05:00  INFO 37104 --- [demo] [Thread-1] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:44:39.589-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:44:39.593-05:00  INFO 37104 --- [demo] [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:44:39.596-05:00  INFO 37104 --- [demo] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-10-02T15:44:39.603-05:00  INFO 37104 --- [demo] [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-10-02T15:44:39.890-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:44:39.909-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:44:40.018-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:44:40.019-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:44:40.020-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:44:40.043-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 346 ms
+2026-10-02T15:44:40.097-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:44:40.124-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:44:40.125-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-10-02T15:44:40.158-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@658034e7
+2026-10-02T15:44:40.159-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-10-02T15:44:40.170-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:44:40.247-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:44:40.289-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:44:40.383-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:44:40.555-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:44:40.579-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:44:40.585-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:44:43.478-05:00  INFO 37104 --- [demo] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-10-02T15:44:43.478-05:00  INFO 37104 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-10-02T15:44:43.481-05:00  INFO 37104 --- [demo] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-10-02T15:45:16.590-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:45:16.592-05:00  INFO 37104 --- [demo] [Thread-5] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:45:16.881-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:45:16.884-05:00  INFO 37104 --- [demo] [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:16.885-05:00  INFO 37104 --- [demo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2026-10-02T15:45:16.890-05:00  INFO 37104 --- [demo] [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2026-10-02T15:45:17.822-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:45:17.852-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:45:18.098-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:45:18.099-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:45:18.100-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:45:18.118-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1054 ms
+2026-10-02T15:45:18.195-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:45:18.222-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:45:18.224-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-10-02T15:45:18.253-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@5bfaecaf
+2026-10-02T15:45:18.254-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-10-02T15:45:18.267-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:45:18.374-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:45:18.418-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:18.507-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:45:18.676-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:45:18.702-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:45:18.709-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:45:24.166-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:45:24.169-05:00  INFO 37104 --- [demo] [Thread-9] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:45:24.577-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:45:24.579-05:00  INFO 37104 --- [demo] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:24.582-05:00  INFO 37104 --- [demo] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2026-10-02T15:45:24.598-05:00  INFO 37104 --- [demo] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2026-10-02T15:45:24.906-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:45:24.922-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:45:25.020-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:45:25.021-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:45:25.022-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:45:25.041-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 319 ms
+2026-10-02T15:45:25.090-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:45:25.111-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:45:25.112-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-10-02T15:45:25.149-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@42f541ee
+2026-10-02T15:45:25.150-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-10-02T15:45:25.163-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:45:25.265-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:45:25.310-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:25.417-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:45:25.668-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:45:25.707-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:45:25.714-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:45:28.123-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:45:28.125-05:00  INFO 37104 --- [demo] [Thread-13] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:45:28.426-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:45:28.428-05:00  INFO 37104 --- [demo] [Thread-13] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:28.429-05:00  INFO 37104 --- [demo] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2026-10-02T15:45:28.431-05:00  INFO 37104 --- [demo] [Thread-13] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2026-10-02T15:45:28.675-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:45:28.694-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:45:28.781-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:45:28.782-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:45:28.782-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:45:28.802-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 284 ms
+2026-10-02T15:45:28.865-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:45:28.888-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:45:28.889-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2026-10-02T15:45:28.917-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@4c5c92dc
+2026-10-02T15:45:28.917-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2026-10-02T15:45:28.934-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:45:29.052-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:45:29.090-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:29.196-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:45:29.414-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:45:29.455-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:45:29.461-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:45:40.006-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:45:40.008-05:00  INFO 37104 --- [demo] [Thread-17] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:45:40.312-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:45:40.314-05:00  INFO 37104 --- [demo] [Thread-17] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:40.314-05:00  INFO 37104 --- [demo] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2026-10-02T15:45:40.318-05:00  INFO 37104 --- [demo] [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2026-10-02T15:45:40.564-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:45:40.577-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:45:40.670-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:45:40.670-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:45:40.671-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:45:40.687-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 286 ms
+2026-10-02T15:45:40.742-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:45:40.766-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:45:40.766-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2026-10-02T15:45:40.797-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@404dad29
+2026-10-02T15:45:40.797-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2026-10-02T15:45:40.807-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:45:40.884-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:45:40.914-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:45:40.996-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:45:41.176-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:45:41.213-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:45:41.219-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:07.069-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-10-02T15:46:07.070-05:00  INFO 37104 --- [demo] [Thread-21] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:07.423-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:07.426-05:00  INFO 37104 --- [demo] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:07.427-05:00  INFO 37104 --- [demo] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2026-10-02T15:46:07.433-05:00  INFO 37104 --- [demo] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2026-10-02T15:46:07.862-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:07.882-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:08.222-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:08.223-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:08.223-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:08.239-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 666 ms
+2026-10-02T15:46:08.312-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:08.334-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:08.335-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2026-10-02T15:46:08.364-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-7 - Added connection org.postgresql.jdbc.PgConnection@1dc8e5ad
+2026-10-02T15:46:08.364-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2026-10-02T15:46:08.376-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:08.445-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:08.479-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:08.577-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:08.773-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:08.806-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:08.816-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:10.182-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:46:10.184-05:00  INFO 37104 --- [demo] [Thread-25] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:10.582-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:10.585-05:00  INFO 37104 --- [demo] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:10.585-05:00  INFO 37104 --- [demo] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2026-10-02T15:46:10.593-05:00  INFO 37104 --- [demo] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2026-10-02T15:46:10.878-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:10.898-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:11.061-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:11.062-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:11.062-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:11.083-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 399 ms
+2026-10-02T15:46:11.158-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:11.193-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:11.194-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2026-10-02T15:46:11.236-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-8 - Added connection org.postgresql.jdbc.PgConnection@77c22f
+2026-10-02T15:46:11.239-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2026-10-02T15:46:11.267-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:11.430-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:11.512-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:11.645-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:11.976-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:12.015-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:12.026-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:13.358-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2026-10-02T15:46:13.359-05:00  INFO 37104 --- [demo] [Thread-29] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:13.681-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:13.683-05:00  INFO 37104 --- [demo] [Thread-29] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:13.684-05:00  INFO 37104 --- [demo] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2026-10-02T15:46:13.686-05:00  INFO 37104 --- [demo] [Thread-29] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2026-10-02T15:46:13.970-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:13.982-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:14.091-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:14.092-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:14.092-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:14.105-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 327 ms
+2026-10-02T15:46:14.156-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:14.179-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:14.180-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2026-10-02T15:46:14.219-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-9 - Added connection org.postgresql.jdbc.PgConnection@f4ae26b
+2026-10-02T15:46:14.219-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2026-10-02T15:46:14.235-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:14.318-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:14.363-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:14.469-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:14.683-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:14.731-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:14.743-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:16.112-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:46:16.116-05:00  INFO 37104 --- [demo] [Thread-33] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:16.928-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:16.930-05:00  INFO 37104 --- [demo] [Thread-33] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:16.931-05:00  INFO 37104 --- [demo] [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown initiated...
+2026-10-02T15:46:16.936-05:00  INFO 37104 --- [demo] [Thread-33] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Shutdown completed.
+2026-10-02T15:46:17.298-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:17.311-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:17.453-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:17.454-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:17.454-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:17.485-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 427 ms
+2026-10-02T15:46:17.564-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:17.601-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:17.602-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2026-10-02T15:46:17.636-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-10 - Added connection org.postgresql.jdbc.PgConnection@20f0dbc1
+2026-10-02T15:46:17.636-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2026-10-02T15:46:17.648-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:17.726-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:17.773-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:17.867-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:18.262-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:18.286-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:18.293-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:20.712-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:46:20.713-05:00  INFO 37104 --- [demo] [Thread-37] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:20.988-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:20.990-05:00  INFO 37104 --- [demo] [Thread-37] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:20.991-05:00  INFO 37104 --- [demo] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown initiated...
+2026-10-02T15:46:20.995-05:00  INFO 37104 --- [demo] [Thread-37] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Shutdown completed.
+2026-10-02T15:46:21.236-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:21.259-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:21.422-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:21.423-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:21.423-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:21.443-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 365 ms
+2026-10-02T15:46:21.541-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:21.563-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:21.564-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2026-10-02T15:46:21.604-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-11 - Added connection org.postgresql.jdbc.PgConnection@26cd77e6
+2026-10-02T15:46:21.604-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2026-10-02T15:46:21.617-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:21.703-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:21.746-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:21.898-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:22.304-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:22.335-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:22.345-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:26.758-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:46:26.760-05:00  INFO 37104 --- [demo] [Thread-41] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:27.056-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:27.059-05:00  INFO 37104 --- [demo] [Thread-41] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:27.060-05:00  INFO 37104 --- [demo] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown initiated...
+2026-10-02T15:46:27.061-05:00  INFO 37104 --- [demo] [Thread-41] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Shutdown completed.
+2026-10-02T15:46:27.310-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:27.321-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:27.414-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:27.415-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:27.415-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:27.431-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 284 ms
+2026-10-02T15:46:27.486-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:27.512-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:27.514-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Starting...
+2026-10-02T15:46:27.543-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-12 - Added connection org.postgresql.jdbc.PgConnection@372de468
+2026-10-02T15:46:27.543-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Start completed.
+2026-10-02T15:46:27.554-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:27.615-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:27.658-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:27.766-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:27.991-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:28.084-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:28.180-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:46:43.600-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:46:43.601-05:00  INFO 37104 --- [demo] [Thread-45] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:46:44.205-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:46:44.208-05:00  INFO 37104 --- [demo] [Thread-45] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:44.208-05:00  INFO 37104 --- [demo] [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown initiated...
+2026-10-02T15:46:44.210-05:00  INFO 37104 --- [demo] [Thread-45] com.zaxxer.hikari.HikariDataSource       : HikariPool-12 - Shutdown completed.
+2026-10-02T15:46:44.591-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:46:44.608-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:46:44.732-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:46:44.732-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:46:44.733-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:46:44.752-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 429 ms
+2026-10-02T15:46:44.814-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:46:44.840-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:46:44.842-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2026-10-02T15:46:44.871-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-13 - Added connection org.postgresql.jdbc.PgConnection@33162fcd
+2026-10-02T15:46:44.872-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2026-10-02T15:46:44.884-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:46:44.952-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:46:44.997-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:46:45.084-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:46:45.324-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:46:45.366-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:46:45.380-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:47:26.353-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:47:26.355-05:00  INFO 37104 --- [demo] [Thread-49] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:47:26.757-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:47:26.758-05:00  INFO 37104 --- [demo] [Thread-49] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:26.759-05:00  INFO 37104 --- [demo] [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown initiated...
+2026-10-02T15:47:26.764-05:00  INFO 37104 --- [demo] [Thread-49] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Shutdown completed.
+2026-10-02T15:47:27.008-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:47:27.019-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:47:27.111-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:47:27.111-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:47:27.112-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:47:27.126-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 273 ms
+2026-10-02T15:47:27.189-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:47:27.212-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:47:27.213-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2026-10-02T15:47:27.241-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-14 - Added connection org.postgresql.jdbc.PgConnection@16243e81
+2026-10-02T15:47:27.241-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2026-10-02T15:47:27.249-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:47:27.311-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:47:27.343-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:27.433-05:00  WARN 37104 --- [demo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+2026-10-02T15:47:27.444-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:27.447-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown initiated...
+2026-10-02T15:47:27.520-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Shutdown completed.
+2026-10-02T15:47:27.521-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-02T15:47:27.529-05:00  INFO 37104 --- [demo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-02T15:47:27.545-05:00 ERROR 37104 --- [demo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1319) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1216) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.spring.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.spring.demo.rest.StudentController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@69b727ec]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Pageable
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2506) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.9.jar:7.0.9]
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Pageable
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:469) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 32 common frames omitted
+
+2026-10-02T15:47:35.343-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:47:35.355-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:47:35.440-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:47:35.442-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:47:35.442-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:47:35.456-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 304 ms
+2026-10-02T15:47:35.503-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:47:35.526-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:47:35.526-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2026-10-02T15:47:35.562-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-15 - Added connection org.postgresql.jdbc.PgConnection@2bfe435b
+2026-10-02T15:47:35.562-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2026-10-02T15:47:35.583-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:47:35.825-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:47:35.914-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:36.073-05:00  WARN 37104 --- [demo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+2026-10-02T15:47:36.073-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:36.074-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown initiated...
+2026-10-02T15:47:36.110-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Shutdown completed.
+2026-10-02T15:47:36.110-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-02T15:47:36.116-05:00  INFO 37104 --- [demo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-02T15:47:36.121-05:00 ERROR 37104 --- [demo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1319) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1216) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.spring.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.spring.demo.rest.StudentController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@a31f548]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Pageable
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2506) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.9.jar:7.0.9]
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Pageable
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:469) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 32 common frames omitted
+
+2026-10-02T15:47:40.832-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:47:40.850-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:47:40.975-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:47:40.976-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:47:40.976-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:47:40.994-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 379 ms
+2026-10-02T15:47:41.060-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:47:41.082-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:47:41.084-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Starting...
+2026-10-02T15:47:41.118-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-16 - Added connection org.postgresql.jdbc.PgConnection@23fe28c9
+2026-10-02T15:47:41.118-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Start completed.
+2026-10-02T15:47:41.137-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:47:41.194-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:47:41.229-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:41.280-05:00  WARN 37104 --- [demo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+2026-10-02T15:47:41.280-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:41.281-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown initiated...
+2026-10-02T15:47:41.294-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-16 - Shutdown completed.
+2026-10-02T15:47:41.295-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-02T15:47:41.299-05:00  INFO 37104 --- [demo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-02T15:47:41.301-05:00 ERROR 37104 --- [demo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'studentController': Lookup method resolution failed
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:482) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:352) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1319) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1216) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.spring.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.spring.demo.rest.StudentController] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@465f78cd]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:483) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:320) ~[spring-core-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.checkLookupMethods(AutowiredAnnotationBeanPostProcessor.java:460) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 26 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: Pageable
+	at java.base/java.lang.Class.getDeclaredMethods0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredMethods(Class.java:3404) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredMethods(Class.java:2506) ~[na:na]
+	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:465) ~[spring-core-7.0.9.jar:7.0.9]
+	... 28 common frames omitted
+Caused by: java.lang.ClassNotFoundException: Pageable
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:469) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:123) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 32 common frames omitted
+
+2026-10-02T15:47:46.065-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:47:46.080-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:47:46.176-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:47:46.178-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:47:46.179-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:47:46.197-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 339 ms
+2026-10-02T15:47:46.245-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:47:46.273-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:47:46.274-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Starting...
+2026-10-02T15:47:46.300-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-17 - Added connection org.postgresql.jdbc.PgConnection@2e24dfa1
+2026-10-02T15:47:46.300-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Start completed.
+2026-10-02T15:47:46.313-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:47:46.363-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:47:46.394-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:46.468-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:47:46.653-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:47:46.693-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:47:46.697-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:47:51.098-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:47:51.100-05:00  INFO 37104 --- [demo] [Thread-53] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:47:51.376-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:47:51.378-05:00  INFO 37104 --- [demo] [Thread-53] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:51.378-05:00  INFO 37104 --- [demo] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown initiated...
+2026-10-02T15:47:51.380-05:00  INFO 37104 --- [demo] [Thread-53] com.zaxxer.hikari.HikariDataSource       : HikariPool-17 - Shutdown completed.
+2026-10-02T15:47:51.650-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:47:51.667-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:47:51.785-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:47:51.785-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:47:51.786-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:47:51.799-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 320 ms
+2026-10-02T15:47:51.854-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:47:51.876-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:47:51.877-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Starting...
+2026-10-02T15:47:51.904-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-18 - Added connection org.postgresql.jdbc.PgConnection@4ff3a15e
+2026-10-02T15:47:51.904-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Start completed.
+2026-10-02T15:47:51.917-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:47:51.980-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:47:52.013-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:47:52.092-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:47:52.250-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:47:52.268-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:47:52.274-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:48:00.793-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:48:00.795-05:00  INFO 37104 --- [demo] [Thread-66] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:48:01.101-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:48:01.102-05:00  INFO 37104 --- [demo] [Thread-66] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:01.103-05:00  INFO 37104 --- [demo] [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown initiated...
+2026-10-02T15:48:01.105-05:00  INFO 37104 --- [demo] [Thread-66] com.zaxxer.hikari.HikariDataSource       : HikariPool-18 - Shutdown completed.
+2026-10-02T15:48:01.364-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:48:01.377-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:48:01.474-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:48:01.475-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:48:01.475-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:48:01.488-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 281 ms
+2026-10-02T15:48:01.543-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:48:01.570-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:48:01.572-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Starting...
+2026-10-02T15:48:01.609-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-19 - Added connection org.postgresql.jdbc.PgConnection@6d56011e
+2026-10-02T15:48:01.609-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Start completed.
+2026-10-02T15:48:01.617-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:48:01.674-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:48:01.704-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:01.800-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:48:01.968-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:48:01.991-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:48:01.996-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:48:22.697-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:48:22.698-05:00  INFO 37104 --- [demo] [Thread-70] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:48:23.062-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:48:23.065-05:00  INFO 37104 --- [demo] [Thread-70] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:23.065-05:00  INFO 37104 --- [demo] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown initiated...
+2026-10-02T15:48:23.071-05:00  INFO 37104 --- [demo] [Thread-70] com.zaxxer.hikari.HikariDataSource       : HikariPool-19 - Shutdown completed.
+2026-10-02T15:48:23.323-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:48:23.334-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:48:23.437-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:48:23.437-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:48:23.438-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:48:23.453-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 284 ms
+2026-10-02T15:48:23.516-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:48:23.545-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:48:23.546-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Starting...
+2026-10-02T15:48:23.577-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-20 - Added connection org.postgresql.jdbc.PgConnection@53d4d57c
+2026-10-02T15:48:23.577-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Start completed.
+2026-10-02T15:48:23.584-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:48:23.641-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:48:23.675-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:23.788-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:48:23.950-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:48:23.968-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:48:23.979-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:48:26.406-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:48:26.408-05:00  INFO 37104 --- [demo] [Thread-74] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:48:26.855-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:48:26.857-05:00  INFO 37104 --- [demo] [Thread-74] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:26.858-05:00  INFO 37104 --- [demo] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown initiated...
+2026-10-02T15:48:26.863-05:00  INFO 37104 --- [demo] [Thread-74] com.zaxxer.hikari.HikariDataSource       : HikariPool-20 - Shutdown completed.
+2026-10-02T15:48:27.140-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:48:27.155-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:48:27.283-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:48:27.284-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:48:27.284-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:48:27.303-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 342 ms
+2026-10-02T15:48:27.357-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:48:27.380-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:48:27.381-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Starting...
+2026-10-02T15:48:27.411-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-21 - Added connection org.postgresql.jdbc.PgConnection@4b94a7f1
+2026-10-02T15:48:27.412-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Start completed.
+2026-10-02T15:48:27.423-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:48:27.490-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:48:27.536-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:27.631-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:48:27.809-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:48:27.832-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:48:27.840-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:48:41.533-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:48:41.535-05:00  INFO 37104 --- [demo] [Thread-78] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:48:42.012-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:48:42.014-05:00  INFO 37104 --- [demo] [Thread-78] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:42.014-05:00  INFO 37104 --- [demo] [Thread-78] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown initiated...
+2026-10-02T15:48:42.021-05:00  INFO 37104 --- [demo] [Thread-78] com.zaxxer.hikari.HikariDataSource       : HikariPool-21 - Shutdown completed.
+2026-10-02T15:48:42.323-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:48:42.337-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:48:42.451-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:48:42.452-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:48:42.452-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:48:42.471-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 348 ms
+2026-10-02T15:48:42.534-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:48:42.569-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:48:42.570-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Starting...
+2026-10-02T15:48:42.600-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-22 - Added connection org.postgresql.jdbc.PgConnection@385e781c
+2026-10-02T15:48:42.601-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Start completed.
+2026-10-02T15:48:42.610-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:48:42.666-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:48:42.700-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:48:42.775-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:48:42.897-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:48:42.920-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:48:42.926-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:49:03.112-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:49:03.114-05:00  INFO 37104 --- [demo] [Thread-82] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:49:03.479-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:49:03.482-05:00  INFO 37104 --- [demo] [Thread-82] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:49:03.484-05:00  INFO 37104 --- [demo] [Thread-82] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown initiated...
+2026-10-02T15:49:03.487-05:00  INFO 37104 --- [demo] [Thread-82] com.zaxxer.hikari.HikariDataSource       : HikariPool-22 - Shutdown completed.
+2026-10-02T15:49:03.793-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:49:03.812-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:49:03.938-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:49:03.939-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:49:03.939-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:49:03.961-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 350 ms
+2026-10-02T15:49:04.025-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:49:04.057-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:49:04.058-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Starting...
+2026-10-02T15:49:04.090-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-23 - Added connection org.postgresql.jdbc.PgConnection@6e45f70a
+2026-10-02T15:49:04.090-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Start completed.
+2026-10-02T15:49:04.102-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:49:04.176-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:49:04.211-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:49:04.307-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:49:04.524-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:49:04.557-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:49:04.566-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:49:20.195-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:49:20.196-05:00  INFO 37104 --- [demo] [Thread-86] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:49:20.503-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:49:20.505-05:00  INFO 37104 --- [demo] [Thread-86] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:49:20.506-05:00  INFO 37104 --- [demo] [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown initiated...
+2026-10-02T15:49:20.508-05:00  INFO 37104 --- [demo] [Thread-86] com.zaxxer.hikari.HikariDataSource       : HikariPool-23 - Shutdown completed.
+2026-10-02T15:49:20.765-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:49:20.777-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:49:20.876-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:49:20.877-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:49:20.877-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:49:20.893-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 284 ms
+2026-10-02T15:49:20.953-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:49:20.975-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:49:20.976-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Starting...
+2026-10-02T15:49:21.009-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-24 - Added connection org.postgresql.jdbc.PgConnection@13fed1bf
+2026-10-02T15:49:21.009-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Start completed.
+2026-10-02T15:49:21.022-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:49:21.080-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:49:21.111-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:49:21.197-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:49:21.356-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:49:21.385-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:49:21.393-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:50:19.761-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:50:19.763-05:00  INFO 37104 --- [demo] [Thread-90] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:50:20.166-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:50:20.169-05:00  INFO 37104 --- [demo] [Thread-90] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:50:20.169-05:00  INFO 37104 --- [demo] [Thread-90] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown initiated...
+2026-10-02T15:50:20.174-05:00  INFO 37104 --- [demo] [Thread-90] com.zaxxer.hikari.HikariDataSource       : HikariPool-24 - Shutdown completed.
+2026-10-02T15:50:20.457-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:50:20.473-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:50:20.622-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:50:20.623-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:50:20.623-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:50:20.655-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 380 ms
+2026-10-02T15:50:20.898-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:50:21.047-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:50:21.062-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Starting...
+2026-10-02T15:50:21.145-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-25 - Added connection org.postgresql.jdbc.PgConnection@3b60b7ff
+2026-10-02T15:50:21.146-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Start completed.
+2026-10-02T15:50:21.199-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:50:21.377-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:50:21.475-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:50:21.832-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:50:22.097-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:50:22.128-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:50:22.135-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:50:26.554-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:50:26.555-05:00  INFO 37104 --- [demo] [Thread-94] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:50:26.853-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:50:26.855-05:00  INFO 37104 --- [demo] [Thread-94] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:50:26.856-05:00  INFO 37104 --- [demo] [Thread-94] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown initiated...
+2026-10-02T15:50:26.860-05:00  INFO 37104 --- [demo] [Thread-94] com.zaxxer.hikari.HikariDataSource       : HikariPool-25 - Shutdown completed.
+2026-10-02T15:50:27.122-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:50:27.132-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:50:27.229-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:50:27.230-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:50:27.230-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:50:27.250-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 290 ms
+2026-10-02T15:50:27.327-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:50:27.354-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:50:27.355-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Starting...
+2026-10-02T15:50:27.384-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-26 - Added connection org.postgresql.jdbc.PgConnection@463a89c8
+2026-10-02T15:50:27.385-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Start completed.
+2026-10-02T15:50:27.397-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:50:27.465-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:50:27.495-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:50:27.593-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:50:27.743-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:50:27.763-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:50:27.772-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:50:52.544-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:50:52.545-05:00  INFO 37104 --- [demo] [Thread-98] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:50:52.914-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:50:52.916-05:00  INFO 37104 --- [demo] [Thread-98] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:50:52.917-05:00  INFO 37104 --- [demo] [Thread-98] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown initiated...
+2026-10-02T15:50:52.922-05:00  INFO 37104 --- [demo] [Thread-98] com.zaxxer.hikari.HikariDataSource       : HikariPool-26 - Shutdown completed.
+2026-10-02T15:50:53.173-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:50:53.186-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:50:53.275-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:50:53.275-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:50:53.275-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:50:53.293-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 285 ms
+2026-10-02T15:50:53.463-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:50:53.486-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:50:53.486-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Starting...
+2026-10-02T15:50:53.512-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-27 - Added connection org.postgresql.jdbc.PgConnection@31722d4d
+2026-10-02T15:50:53.512-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Start completed.
+2026-10-02T15:50:53.525-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:50:53.587-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:50:53.615-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:50:53.695-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:50:53.848-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:50:53.872-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:50:53.877-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:51:03.437-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:51:03.441-05:00  INFO 37104 --- [demo] [Thread-102] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:51:03.833-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:51:03.835-05:00  INFO 37104 --- [demo] [Thread-102] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:03.835-05:00  INFO 37104 --- [demo] [Thread-102] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown initiated...
+2026-10-02T15:51:03.841-05:00  INFO 37104 --- [demo] [Thread-102] com.zaxxer.hikari.HikariDataSource       : HikariPool-27 - Shutdown completed.
+2026-10-02T15:51:04.296-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:51:04.310-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:51:04.431-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:51:04.432-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:51:04.432-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:51:04.445-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 382 ms
+2026-10-02T15:51:04.495-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:51:04.526-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:51:04.527-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Starting...
+2026-10-02T15:51:04.564-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-28 - Added connection org.postgresql.jdbc.PgConnection@58e2bdd7
+2026-10-02T15:51:04.564-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Start completed.
+2026-10-02T15:51:04.578-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:51:04.644-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:51:04.691-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:04.760-05:00  WARN 37104 --- [demo] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'schoolController' defined in file [C:\Users\EthanWilson\Git_Repos\java-fs\Week_6\JpaRepoApp\target\classes\com\spring\demo\rest\SchoolController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'schoolService' defined in file [C:\Users\EthanWilson\Git_Repos\java-fs\Week_6\JpaRepoApp\target\classes\com\spring\demo\service\SchoolService.class]: Failed to instantiate [com.spring.demo.service.SchoolService]: Constructor threw exception
+2026-10-02T15:51:04.761-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:04.762-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown initiated...
+2026-10-02T15:51:04.809-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-28 - Shutdown completed.
+2026-10-02T15:51:04.811-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-10-02T15:51:04.819-05:00  INFO 37104 --- [demo] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-02T15:51:04.825-05:00 ERROR 37104 --- [demo] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'schoolController' defined in file [C:\Users\EthanWilson\Git_Repos\java-fs\Week_6\JpaRepoApp\target\classes\com\spring\demo\rest\SchoolController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'schoolService' defined in file [C:\Users\EthanWilson\Git_Repos\java-fs\Week_6\JpaRepoApp\target\classes\com\spring\demo\service\SchoolService.class]: Failed to instantiate [com.spring.demo.service.SchoolService]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1225) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1191) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:994) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-7.0.9.jar:7.0.9]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.1.1.jar:4.1.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.1.1.jar:4.1.1]
+	at com.spring.demo.DemoApplication.main(DemoApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.1.1.jar:4.1.1]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'schoolService' defined in file [C:\Users\EthanWilson\Git_Repos\java-fs\Week_6\JpaRepoApp\target\classes\com\spring\demo\service\SchoolService.class]: Failed to instantiate [com.spring.demo.service.SchoolService]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1380) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1219) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:1232) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1711) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1658) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:912) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 26 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.spring.demo.service.SchoolService]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:220) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:129) ~[spring-beans-7.0.9.jar:7.0.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 40 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	Syntax error on token "Invalid Character", delete this token
+
+	at com.spring.demo.service.SchoolService.<init>(SchoolService.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:207) ~[spring-beans-7.0.9.jar:7.0.9]
+	... 42 common frames omitted
+
+2026-10-02T15:51:06.485-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:51:06.495-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:51:06.597-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:51:06.598-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:51:06.598-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:51:06.619-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 306 ms
+2026-10-02T15:51:06.692-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:51:06.719-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:51:06.719-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Starting...
+2026-10-02T15:51:06.745-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-29 - Added connection org.postgresql.jdbc.PgConnection@33a9b603
+2026-10-02T15:51:06.745-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Start completed.
+2026-10-02T15:51:06.761-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:51:06.825-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:51:06.857-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:06.951-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:51:07.132-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:51:07.158-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:51:07.161-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:51:13.603-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:51:13.605-05:00  INFO 37104 --- [demo] [Thread-106] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:51:14.062-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:51:14.067-05:00  INFO 37104 --- [demo] [Thread-106] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:14.068-05:00  INFO 37104 --- [demo] [Thread-106] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown initiated...
+2026-10-02T15:51:14.072-05:00  INFO 37104 --- [demo] [Thread-106] com.zaxxer.hikari.HikariDataSource       : HikariPool-29 - Shutdown completed.
+2026-10-02T15:51:14.470-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:51:14.484-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:51:14.626-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:51:14.626-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:51:14.627-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:51:14.655-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 398 ms
+2026-10-02T15:51:14.753-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:51:14.792-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:51:14.794-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Starting...
+2026-10-02T15:51:14.835-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-30 - Added connection org.postgresql.jdbc.PgConnection@53183fea
+2026-10-02T15:51:14.837-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Start completed.
+2026-10-02T15:51:14.849-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:51:14.934-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:51:14.972-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:15.070-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:51:15.280-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:51:15.306-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:51:15.311-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:51:24.828-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:51:24.829-05:00  INFO 37104 --- [demo] [Thread-113] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:51:25.125-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:51:25.127-05:00  INFO 37104 --- [demo] [Thread-113] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:25.128-05:00  INFO 37104 --- [demo] [Thread-113] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown initiated...
+2026-10-02T15:51:25.130-05:00  INFO 37104 --- [demo] [Thread-113] com.zaxxer.hikari.HikariDataSource       : HikariPool-30 - Shutdown completed.
+2026-10-02T15:51:25.395-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:51:25.408-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:51:25.499-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:51:25.500-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:51:25.500-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:51:25.518-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 289 ms
+2026-10-02T15:51:25.576-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:51:25.603-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:51:25.604-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Starting...
+2026-10-02T15:51:25.634-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-31 - Added connection org.postgresql.jdbc.PgConnection@692b735f
+2026-10-02T15:51:25.634-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Start completed.
+2026-10-02T15:51:25.645-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:51:25.704-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:51:25.735-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:25.820-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:51:26.035-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:51:26.054-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:51:26.062-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:51:36.566-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:51:36.568-05:00  INFO 37104 --- [demo] [Thread-117] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:51:37.174-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:51:37.179-05:00  INFO 37104 --- [demo] [Thread-117] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:37.179-05:00  INFO 37104 --- [demo] [Thread-117] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown initiated...
+2026-10-02T15:51:37.190-05:00  INFO 37104 --- [demo] [Thread-117] com.zaxxer.hikari.HikariDataSource       : HikariPool-31 - Shutdown completed.
+2026-10-02T15:51:37.847-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-02T15:51:37.871-05:00  INFO 37104 --- [demo] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 22 ms. Found 4 JPA repository interfaces.
+2026-10-02T15:51:38.012-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-10-02T15:51:38.013-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-10-02T15:51:38.013-05:00  INFO 37104 --- [demo] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-02T15:51:38.033-05:00  INFO 37104 --- [demo] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 653 ms
+2026-10-02T15:51:38.121-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-02T15:51:38.152-05:00  INFO 37104 --- [demo] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-02T15:51:38.153-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Starting...
+2026-10-02T15:51:38.192-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-32 - Added connection org.postgresql.jdbc.PgConnection@b3bb1a9
+2026-10-02T15:51:38.192-05:00  INFO 37104 --- [demo] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Start completed.
+2026-10-02T15:51:38.211-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/student_tracker]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 17.11
+	Default catalog/schema: student_tracker/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-02T15:51:38.308-05:00  INFO 37104 --- [demo] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-02T15:51:38.345-05:00  INFO 37104 --- [demo] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:38.416-05:00  WARN 37104 --- [demo] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-10-02T15:51:38.605-05:00  INFO 37104 --- [demo] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 13 endpoints beneath base path '/actuator'
+2026-10-02T15:51:38.631-05:00  INFO 37104 --- [demo] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-10-02T15:51:38.638-05:00  INFO 37104 --- [demo] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2026-10-02T15:51:42.021-05:00  INFO 37104 --- [demo] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-10-02T15:51:42.022-05:00  INFO 37104 --- [demo] [Thread-121] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-10-02T15:51:42.392-05:00  INFO 37104 --- [demo] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-10-02T15:51:42.394-05:00  INFO 37104 --- [demo] [Thread-121] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-02T15:51:42.394-05:00  INFO 37104 --- [demo] [Thread-121] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown initiated...
+2026-10-02T15:51:42.397-05:00  INFO 37104 --- [demo] [Thread-121] com.zaxxer.hikari.HikariDataSource       : HikariPool-32 - Shutdown completed.

@@ -2,6 +2,7 @@ package com.spring.demo.rest;
 
 import java.util.List;
 
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -44,12 +45,8 @@ public class StudentController {
 
     // GET localhost:8080/api/students
     @GetMapping
-    public List<Student> getAllStudents(
-        @RequestParam(defaultValue = "0") int page,
-        @RequestParam(defaultValue = "10") int count,
-        @RequestParam(defaultValue = "true") boolean asc) {
-
-        return studentService.getAllStudents(page, count, asc);
+    public List<Student> getAllStudents(Pageable pageable) {
+        return studentService.getAllStudents(pageable);
     }
 
    @PostMapping

@@ -2,12 +2,9 @@ package com.spring.demo.service;
 
 import java.util.List;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.domain.PageRequest;
+// import org.slf4j.Logger;
+// import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
 import com.spring.demo.persistence.SchoolRepository;
@@ -24,7 +21,9 @@ public class StudentService {
 
     private final StudentRepository studentRepo;
     private final SchoolRepository schoolRepo;
-    private static final Logger log = LoggerFactory.getLogger(StudentService.class);
+    
+    // TO-DO Implement logging
+    //private static final Logger log = LoggerFactory.getLogger(StudentService.class);
 
     public StudentService(
         StudentRepository studentRepository,
@@ -57,18 +56,8 @@ public class StudentService {
     }
 
     @Transactional(readOnly = true)
-    public List<Student> getAllStudents(int page, int count, boolean asc) {
-        Sort.Direction direction = asc
-        ? Sort.Direction.ASC
-        : Sort.Direction.DESC;
-
-        Pageable pageable = PageRequest.of(
-            page,
-            count,
-            Sort.by(direction, "id"));
-
-        Page<Student> students = studentRepo.findAll(pageable);
-        return students.getContent();
+    public List<Student> getAllStudents(Pageable pageable) {
+        return studentRepo.findAll(pageable).getContent();
     }
 
     @Transactional(readOnly = true)
