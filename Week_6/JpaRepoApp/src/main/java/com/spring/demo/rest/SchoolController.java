@@ -1,20 +1,14 @@
 package com.spring.demo.rest;
 
-import java.util.List;
-
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import com.spring.demo.domain.Student;
 import com.spring.demo.domain.School;
-
-import com.spring.demo.service.StudentService;
+import com.spring.demo.service.SchoolService;
 
 import jakarta.validation.Valid;
 
@@ -28,16 +22,16 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping("/api/schools")
 public class SchoolController {
 
-    private final StudentService studentService;
+    private final SchoolService schoolService;
 
-    public SchoolController(StudentService studentService) {
-        this.studentService = studentService;
+    public SchoolController(SchoolService schoolService) {
+        this.schoolService = schoolService;
     }
    
    @PostMapping
    public ResponseEntity<School> insertSchool(@Valid @RequestBody School school) {
        
-        School savedSchool = studentService.insertSchool(school);
+        School savedSchool = schoolService.insertSchool(school);
 
         
         return ResponseEntity
@@ -53,7 +47,7 @@ public class SchoolController {
    
   @GetMapping("/{id}")
    public School getSchoolById(@PathVariable int id) {
-        return studentService.getSchoolById(id);
+        return schoolService.getSchoolById(id);
    }
     
 }

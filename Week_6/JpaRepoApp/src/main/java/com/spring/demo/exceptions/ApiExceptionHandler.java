@@ -10,13 +10,13 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 import org.springframework.web.bind.MethodArgumentNotValidException;
 
 @RestControllerAdvice
-public class StudentExceptionHandler {
+public class ApiExceptionHandler {
 
     @ExceptionHandler(RecordNotFoundException.class)
-    public ResponseEntity<StudentErrorResponse> handleRecordNotFoundException(
+    public ResponseEntity<ApiErrorResponse> handleRecordNotFoundException(
             RecordNotFoundException e) {
 
-        StudentErrorResponse error = new StudentErrorResponse(
+        ApiErrorResponse error = new ApiErrorResponse(
                 HttpStatus.NOT_FOUND.value(),
                 e.getMessage(),
                 System.currentTimeMillis());
@@ -24,12 +24,14 @@ public class StudentExceptionHandler {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
     }
 
+    // this is a simpler version to handle validation compared to the other
+    // it does NOT give the client info about which fields failed validation
     // @ExceptionHandler(MethodArgumentNotValidException.class)
-    // public ResponseEntity<StudentErrorResponse> handleValidationException(
+    // public ResponseEntity<ApiErrorResponse> handleValidationException(
     // MethodArgumentNotValidException e
     // ) {
 
-    // StudentErrorResponse error = new StudentErrorResponse(
+    // ApiErrorResponse error = new ApiErrorResponse(
     // HttpStatus.BAD_REQUEST.value(),
     // "Validation failed. Please check your input.",
     // System.currentTimeMillis());
@@ -38,14 +40,14 @@ public class StudentExceptionHandler {
     // }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<StudentErrorResponse> handleValidationException(
+    public ResponseEntity<ApiErrorResponse> handleValidationException(
             MethodArgumentNotValidException e) {
 
         String details = e.getBindingResult().getFieldErrors().stream()
                 .map(error -> error.getField() + ": " + error.getDefaultMessage())
                 .collect(Collectors.joining("; "));
 
-        StudentErrorResponse error = new StudentErrorResponse(
+        ApiErrorResponse error = new ApiErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
                 details,
                 System.currentTimeMillis());
@@ -54,12 +56,12 @@ public class StudentExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentTypeMismatchException.class)
-    public ResponseEntity<StudentErrorResponse> handleMethodArgsException(
+    public ResponseEntity<ApiErrorResponse> handleMethodArgsException(
             MethodArgumentTypeMismatchException e) {
 
-        StudentErrorResponse error = new StudentErrorResponse(
+        ApiErrorResponse error = new ApiErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
-                "The id provided was not valid. Please only supply an integer.",
+                "The argument(s) provided is(are) not valid. Please only supply valid arguments.",
                 System.currentTimeMillis());
 
         return ResponseEntity
@@ -68,10 +70,10 @@ public class StudentExceptionHandler {
     }
 
     // @ExceptionHandler(Exception.class)
-    // public ResponseEntity<StudentErrorResponse> handleGenericException(Exception
+    // public ResponseEntity<ApiErrorResponse> handleGenericException(Exception
     // e) {
 
-    // StudentErrorResponse error = new StudentErrorResponse(
+    // ApiErrorResponse error = new ApiErrorResponse(
     // HttpStatus.INTERNAL_SERVER_ERROR.value(),
     // "An internal error ocurred.",
     // System.currentTimeMillis());

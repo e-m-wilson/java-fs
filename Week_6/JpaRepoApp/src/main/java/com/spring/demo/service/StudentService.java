@@ -4,18 +4,14 @@ import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Service;
 
-import com.spring.demo.dao.CourseRepository;
-import com.spring.demo.dao.EnrollmentRepository;
-import com.spring.demo.dao.SchoolRepository;
-import com.spring.demo.dao.StudentDAO;
-import com.spring.demo.dao.StudentRepository;
+import com.spring.demo.persistence.SchoolRepository;
+import com.spring.demo.persistence.StudentRepository;
 import com.spring.demo.domain.Student;
 import com.spring.demo.dto.StudentWriteDto;
 import com.spring.demo.domain.School;
@@ -27,20 +23,14 @@ import org.springframework.transaction.annotation.Transactional;
 public class StudentService {
 
     private final StudentRepository studentRepo;
-    private final EnrollmentRepository enrollmentRepo;
-    private final CourseRepository courseRepo;
     private final SchoolRepository schoolRepo;
     private static final Logger log = LoggerFactory.getLogger(StudentService.class);
 
     public StudentService(
         StudentRepository studentRepository,
-        EnrollmentRepository enrollmentRepository,
-        CourseRepository courseRepository,
         SchoolRepository schoolRepository
     ) {
         this.studentRepo = studentRepository;
-        this.enrollmentRepo = enrollmentRepository;
-        this.courseRepo = courseRepository;
         this.schoolRepo = schoolRepository;
     }
 
@@ -59,11 +49,6 @@ public class StudentService {
         );
 
         return studentRepo.save(newStudent);
-    }
-
-    @Transactional
-    public School insertSchool(School school) {
-        return schoolRepo.save(school);
     }
 
     @Transactional(readOnly = true)
@@ -126,20 +111,6 @@ public class StudentService {
         existingStudent.setLastName(student.getLastName());
 
         return existingStudent;
-    }
-
-    // SCHOOLS
-    @Transactional(readOnly = true)
-    public School getSchoolById(int id) {
-          School school = schoolRepo.findById(id)
-            .orElseThrow(() -> 
-                new RecordNotFoundException(
-                    "School not found with id: " + id
-                )
-            );
-
-
-        return school;
     }
 
 }

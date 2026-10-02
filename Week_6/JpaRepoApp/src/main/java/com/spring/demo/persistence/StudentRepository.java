@@ -1,4 +1,4 @@
-package com.spring.demo.dao;
+package com.spring.demo.persistence;
 
 import java.util.List;
 

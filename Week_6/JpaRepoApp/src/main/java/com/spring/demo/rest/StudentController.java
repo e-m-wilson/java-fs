@@ -13,7 +13,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.spring.demo.domain.Student;
 import com.spring.demo.dto.StudentWriteDto;
-import com.spring.demo.domain.School;
 
 import com.spring.demo.service.StudentService;
 
