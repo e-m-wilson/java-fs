@@ -1,0 +1,15 @@
+<mat-toolbar>
+  <span>Student Management App</span>
+
+  <nav>
+    <a mat-button [routerLink]="['/']">Home</a>
+    @if(isLoggedIn()){
+      <a mat-button (click)="logout()">Logout</a>
+    }
+    <a mat-button [routerLink]="['/about']">About</a>
+  </nav>
+  
+</mat-toolbar>
+
+
+<router-outlet />

@@ -1,0 +1,13 @@
+<mat-card appearance="outlined">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>{{ student().firstName }}</mat-card-title>
+      <mat-card-title>{{ student().lastName }}</mat-card-title> 
+      <mat-card-subtitle>Student ID: {{ student().id }}</mat-card-subtitle>
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-actions>
+    <button matButton="outlined" [routerLink]="['/students', student().id]">Student Details</button>
+    <button matButton="filled" class="delete-button" (click)="deleteStudent()">Delete</button>
+  </mat-card-actions>
+</mat-card>

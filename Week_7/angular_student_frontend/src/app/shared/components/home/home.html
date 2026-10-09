@@ -1,0 +1,54 @@
+<section>
+    <h2>Create a new student:</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="saveNewStudent()">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput id="first-name" type="text" formControlName="firstName" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput id="last-name" type="text" formControlName="lastName" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput id="email" type="text" formControlName="email" />
+        </mat-form-field>
+    
+        <button matButton="filled" type="submit">Save New Student</button>
+    </form>
+</section>
+
+<!-- <div id="student-filter">
+    <form (ngSubmit)="filterStudents()">
+        <mat-form-field>
+            <mat-label>Filter students by email:</mat-label>
+            <input [formControl]="emailFilter" matInput id="emailQuery" type="text" />    
+        </mat-form-field>
+        <button type="submit" matButton="filled">Search</button>    
+    </form>
+</div> -->
+
+
+@if(isLoading()){
+    <div class="home-content">
+        <mat-spinner></mat-spinner>    
+    </div>
+} @else if (loadError()) {
+    <div class="home-content">
+        <mat-spinner></mat-spinner>
+        <p>Could not fetch students. Check your connection.</p>    
+    </div>
+} @else if(studentList()?.length !== 0) {
+    <div class="student-grid">
+        @for (student of studentList(); track student.id) {
+        <app-student-card 
+        [student]="student" 
+        (deleted)="onStudentDeleted($event)"
+        />
+        }
+    </div>
+} @else {
+    <div class="home-content">
+        <p>No students in db.</p>    
+    </div>
+}
