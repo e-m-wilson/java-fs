@@ -1,0 +1,8 @@
+.cal {
+    width: 100%;
+    border: none;
+}
+
+.cal :global(.react-calendar__tile--now) {
+    background-color: rgb(174, 211, 247);
+}

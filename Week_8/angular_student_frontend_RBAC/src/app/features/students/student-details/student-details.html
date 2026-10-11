@@ -1,0 +1,35 @@
+@if (!editMode()) {
+  <mat-card appearance="outlined">
+    <mat-card-header>
+      <mat-card-title>{{ student()?.firstName }} {{ student()?.lastName }}</mat-card-title>
+      <mat-card-subtitle>Student ID: {{ student()?.id }}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Email: {{ student()?.email }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button matButton (click)="toggleEditForm()">Edit</button>
+    </mat-card-actions>
+  </mat-card>
+} @else {
+  <section>
+    <h2>Edit student:</h2>
+    <form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
+      <mat-form-field>
+        <mat-label>First Name</mat-label>
+        <input matInput id="first-name" type="text" formControlName="firstName" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Last Name</mat-label>
+        <input matInput id="last-name" type="text" formControlName="lastName" />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input matInput id="email" type="text" formControlName="email" />
+      </mat-form-field>
+
+      <button matButton="filled" type="submit">Save Student</button>
+      <button matButton="outlined" type="button" (click)="toggleEditForm()">Cancel</button>
+    </form>
+  </section>
+}
