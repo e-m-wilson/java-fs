@@ -2,6 +2,7 @@ package com.spring.demo.security;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -69,7 +70,9 @@ public class SecurityConfig {
 
     // this filter chain determines which routes are protected 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http)
+        public SecurityFilterChain filterChain(
+            HttpSecurity http,
+            @Value("${app.security.csrf-cookie.same-site}") String csrfCookieSameSite)
             throws Exception {
                 // hasRole() always expects a name minus the default prefix 'ROLE_'
                 // i.e. hasRole("ADMIN") = "ROLE_ADMIN" saved in db
@@ -107,7 +110,10 @@ public class SecurityConfig {
             (request, response, exception) -> response.setStatus(401);
         http.httpBasic(httpBasic -> httpBasic.authenticationEntryPoint(apiAuthenticationEntryPoint));
         http.cors(Customizer.withDefaults());
-        http.csrf(csrf -> csrf.csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()));
+        CookieCsrfTokenRepository csrfTokenRepository =
+            CookieCsrfTokenRepository.withHttpOnlyFalse();
+        csrfTokenRepository.setCookieCustomizer(cookie -> cookie.sameSite(csrfCookieSameSite));
+        http.csrf(csrf -> csrf.csrfTokenRepository(csrfTokenRepository));
 
         return http.build();
     }
