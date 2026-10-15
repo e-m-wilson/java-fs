@@ -1,3 +1,4 @@
+@if (auth.canCreateOrEditStudents()) {
 <section>
     <h2>Create a new student:</h2>
     <form [formGroup]="studentForm" (ngSubmit)="saveNewStudent()">
@@ -17,6 +18,7 @@
         <button matButton="filled" type="submit">Save New Student</button>
     </form>
 </section>
+}
 
 <!-- <div id="student-filter">
     <form (ngSubmit)="filterStudents()">

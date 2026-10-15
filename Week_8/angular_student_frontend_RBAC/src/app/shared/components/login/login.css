@@ -1,4 +1,16 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+form > button {
+    margin: 10px;
+}
+
 section {
+    margin: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

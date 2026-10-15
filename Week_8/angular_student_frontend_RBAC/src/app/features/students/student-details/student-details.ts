@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { NewStudent } from '../new-student';
+import { Auth } from '../../../shared/services/auth';
 
 @Component({
   imports: [MatCardModule, MatButtonModule, MatInputModule, MatFormFieldModule, ReactiveFormsModule],
@@ -19,6 +20,7 @@ import { NewStudent } from '../new-student';
 export class StudentDetails implements OnInit {
   route = inject(ActivatedRoute);
   studentService = inject(StudentService);
+  readonly auth = inject(Auth);
 
   student = signal<Student | undefined>(undefined);
   editMode = signal(false);
@@ -42,10 +44,18 @@ export class StudentDetails implements OnInit {
   }
 
   toggleEditForm() {
+    if (!this.auth.canCreateOrEditStudents()) {
+      return;
+    }
+
     this.editMode.update((value) => !value);
   }
 
   saveStudent() {
+    if (!this.auth.canCreateOrEditStudents()) {
+      return;
+    }
+
     const currentStudent = this.student();
 
     if (!currentStudent || this.studentForm.invalid) {

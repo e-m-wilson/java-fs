@@ -8,6 +8,8 @@
   </mat-card-header>
   <mat-card-actions>
     <button matButton="outlined" [routerLink]="['/students', student().id]">Student Details</button>
-    <button matButton="filled" class="delete-button" (click)="deleteStudent()">Delete</button>
+    @if (auth.canDeleteStudents()) {
+      <button matButton="filled" class="delete-button" (click)="deleteStudent()">Delete</button>
+    }
   </mat-card-actions>
 </mat-card>

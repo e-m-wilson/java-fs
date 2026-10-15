@@ -1,4 +1,21 @@
 <section>
-    <h2>Click to log in!</h2>
-    <button (click)="login()" matButton="filled">Login</button>    
+    <h1>{{ mode() === 'login' ? 'Login' : 'Create account' }}</h1>
+    @if (registrationComplete()) {
+        <p role="status">Registration successful. You can now log in.</p>
+    }
+    <form [formGroup]="loginForm" (ngSubmit)="loginOrRegister()">
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput id="userName" type="text" formControlName="userName" />
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput id="password" type="password" formControlName="password" />
+        </mat-form-field>
+    
+        <button matButton="filled" type="submit">{{ mode() === 'login' ? 'Login' : 'Register' }}</button>
+        <button matButton type="button" (click)="toggleMode()">
+            {{ mode() === 'login' ? 'Create an account' : 'Back to login' }}
+        </button>
+    </form>  
 </section>

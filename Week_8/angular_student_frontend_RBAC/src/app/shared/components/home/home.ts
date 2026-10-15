@@ -10,6 +10,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { Auth } from '../../services/auth';
 
 
 @Component({
@@ -22,6 +23,7 @@ export class Home implements OnInit {
 
   
   studentService: StudentService = inject(StudentService);
+  readonly auth = inject(Auth);
   studentList = signal<Student[] | undefined>(undefined);
   private _snackBar = inject(MatSnackBar);
 
@@ -50,6 +52,10 @@ ngOnInit(): void {
 }
 
   saveNewStudent() {
+  if (!this.auth.canCreateOrEditStudents()) {
+    return;
+  }
+
   const formValue = this.studentForm.getRawValue();
 
   const newStudent = {
@@ -96,6 +102,10 @@ ngOnInit(): void {
   }
 
   onStudentDeleted(student: Student) {
+    if (!this.auth.canDeleteStudents()) {
+      return;
+    }
+
     this.studentService.deleteStudent(student.id).subscribe({
       next: () => {
         this.studentList.update(students =>

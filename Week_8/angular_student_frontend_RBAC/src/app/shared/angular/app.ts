@@ -21,7 +21,8 @@ export class App {
   }
 
   logout() {
-    this.authSerivce.logout();
-    this.router.navigateByUrl('/login');
+    this.authSerivce.logout().subscribe(() => {
+      void this.router.navigateByUrl('/login');
+    });
   }
 }

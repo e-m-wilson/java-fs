@@ -1,4 +1,4 @@
-@if (!editMode()) {
+@if (!editMode() || !auth.canCreateOrEditStudents()) {
   <mat-card appearance="outlined">
     <mat-card-header>
       <mat-card-title>{{ student()?.firstName }} {{ student()?.lastName }}</mat-card-title>
@@ -8,7 +8,9 @@
       <p>Email: {{ student()?.email }}</p>
     </mat-card-content>
     <mat-card-actions>
-      <button matButton (click)="toggleEditForm()">Edit</button>
+      @if (auth.canCreateOrEditStudents()) {
+        <button matButton (click)="toggleEditForm()">Edit</button>
+      }
     </mat-card-actions>
   </mat-card>
 } @else {
