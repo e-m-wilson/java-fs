@@ -7,11 +7,16 @@ import {
 } from "@mui/material";
 import { useStudents } from "./useStudents";
 import { NavLink, useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
 function StudentDetails() {
   const navigate = useNavigate();
   const { id } = useParams();
   const { student, isLoadingStudent } = useStudents(id);
+
+  useEffect(() => {
+    document.title = `Viewing Student: ${id}`;
+  }, [id]);
 
   if (isLoadingStudent) return <Typography>Loading Student...</Typography>;
 

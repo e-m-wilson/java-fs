@@ -25,6 +25,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PutMapping;
 
 
+// @CrossOrigin is redundant here since we defined global settings in the SecurityConfig.java
+// this won't take priority over the settings in that file 
+// just leaving it here for demonstration purposes 
 // 4200 - angular frontend
 // 3000 - react frontend
 @CrossOrigin(origins = {
@@ -96,7 +99,7 @@ public class StudentController {
    }
 
    @PutMapping("/{id}")
-   public Student updateStudent(@PathVariable int id, @Valid @RequestBody Student student) {
+   public Student updateStudent(@PathVariable int id, @Valid @RequestBody StudentWriteDto student) {
        return studentService.updateStudent(id, student);
    }
 

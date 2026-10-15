@@ -97,12 +97,19 @@ public class StudentService {
     // this will detect the change to the managed entity, and the
     // changes will be auto commited
     @Transactional
-    public Student updateStudent(int id, Student student) {
+    public Student updateStudent(int id, StudentWriteDto student) {
+
         Student existingStudent = getStudentById(id);
+        School school = null;
+        if(student.getSchoolId() != null) {
+            school = schoolRepo.findById(student.getSchoolId())
+            .orElse(null);
+        }
 
         existingStudent.setEmail(student.getEmail());
         existingStudent.setFirstName(student.getFirstName());
         existingStudent.setLastName(student.getLastName());
+        existingStudent.setSchool(school);
 
         return existingStudent;
     }

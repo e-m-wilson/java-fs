@@ -1,7 +1,14 @@
 import { Button, Stack, Typography } from "@mui/material";
 import { NavLink } from "react-router";
+import { useEffect } from "react";
 
 function Welcome() {
+
+
+  useEffect(() => {
+      document.title = `Student Management App`;
+    }, []);
+
   return (
     <Stack
       sx={{

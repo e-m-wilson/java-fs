@@ -2,12 +2,17 @@ import { Box, Button, CircularProgress, Stack, TextField, Typography } from "@mu
 import React from "react";
 import { useStudents } from "./useStudents";
 import { NavLink, useNavigate, useParams } from "react-router";
+import { useEffect } from "react";
 
 function StudentForm() {
   const { id } = useParams();
   const { updateStudent, createStudent, student, isLoadingStudent } =
     useStudents(id);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = `Student Form`;
+  }, []);
 
   async function handleSubmit(event: React.SubmitEvent) {
     event.preventDefault();

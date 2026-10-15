@@ -2,10 +2,15 @@ import { CircularProgress, Grid } from "@mui/material";
 import StudentList from "./StudentList";
 import { useStudents } from "./useStudents";
 import StudentFilters from "./StudentFilters";
+import { useEffect } from "react";
 
 function StudentDashboard() {
   // custom hook
   const { students } = useStudents();
+
+  useEffect(() => {
+    document.title = `Students`;
+  }, []);
 
   if (!students) {
     return <CircularProgress sx={{ display: "block", m: 4, mx: "auto" }} />;

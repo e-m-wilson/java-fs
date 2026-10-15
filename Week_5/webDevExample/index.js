@@ -12,6 +12,12 @@
 //     p.innerHTML = parsedResponse.value;
 // }
 
+console.log(name1);
+var name1 = 'test';
+
+console.log(name2);
+let name2 = 'test2';
+
 
 let form = document.querySelector('#form');
 
