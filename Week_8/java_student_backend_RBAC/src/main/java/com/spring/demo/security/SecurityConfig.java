@@ -10,6 +10,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -19,7 +20,15 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
+// with @EnabledMethodSecurity we can then add @PreAuthorize to our controller mappings
+// this is a way to secure mappings on a granular level and may be included in 
+// addition to the route-based controls here in our SecurityConfig
+// examples: @PreAuthorize("hasRole('ADMIN')")
+//           @PreAuthorize("isAuthenticated()")
+//           @PreAuthorize("hasAnyRole('ADMIN', 'MANAGER')")
+
 @Configuration
+@EnableMethodSecurity
 public class SecurityConfig {
 
     @Bean
