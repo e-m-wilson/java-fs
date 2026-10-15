@@ -11,13 +11,11 @@ export interface Student {
 
 
 export interface LoginCreds {
-    username: string
+    userName: string
     password: string
 }
 
 export interface User {
-    id: string
-    email: string
-    displayName: string
-    imageUrl?: string
+    userName: string
+    roles: string[]
 }

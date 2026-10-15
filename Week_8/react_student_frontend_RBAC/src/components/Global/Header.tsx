@@ -6,10 +6,12 @@ import {
   ListItem,
   Toolbar,
   Typography,
+  ListItemButton
 } from "@mui/material";
-import ListItemButtonLink from "./ListItemButtonLink";
+import ListItemButtonLink, { listItemButtonSx } from "./ListItemButtonLink";
 import { LightMode, DarkMode } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
+import { useAccount } from "./useAccount";
 
 type Props = {
   toggleDarkMode: () => void;
@@ -17,6 +19,11 @@ type Props = {
 
 function Header({ toggleDarkMode }: Props) {
   const theme = useTheme();
+  const { currentUser, logoutUser } = useAccount();
+
+  async function logout() {
+    await logoutUser.mutateAsync();
+  }
 
   return (
     <Box sx={{ flexGrow: 1 }}>
@@ -39,11 +46,31 @@ function Header({ toggleDarkMode }: Props) {
             <ListItem>
               <ListItemButtonLink to="/students">Students</ListItemButtonLink>
             </ListItem>
+            {(currentUser?.roles.includes("ROLE_MANAGER") ||
+                currentUser?.roles.includes("ROLE_ADMIN")) && (
             <ListItem>
               <ListItemButtonLink to="/students/create">
                 Create Student
               </ListItemButtonLink>
             </ListItem>
+            )}
+
+            { !currentUser && (
+            <ListItem>
+              <ListItemButtonLink to="/login">
+                Register/Login
+              </ListItemButtonLink>
+            </ListItem>
+            )}
+
+            { currentUser && (
+            <ListItem>
+              <ListItemButton onClick={logout} sx={listItemButtonSx}>
+                Logout
+              </ListItemButton>
+            </ListItem>
+            )}
+
           </List>
         </Toolbar>
       </AppBar>

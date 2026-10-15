@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import { useStudents } from "./useStudents";
 import { NavLink } from "react-router";
+import { useAccount } from "../Global/useAccount";
 
 type Props = {
   student: Student;
@@ -17,6 +18,7 @@ type Props = {
 
 function StudentCard({ student }: Props) {
   const { deleteStudent } = useStudents();
+  const { currentUser, isLoadingUser } = useAccount();
 
   return (
     <Card sx={{ width: 250 }}>
@@ -29,12 +31,15 @@ function StudentCard({ student }: Props) {
         <Button component={NavLink} to={`/students/${student.id}`}>
           View
         </Button>
+        {(currentUser?.roles.includes("ROLE_ADMIN") || 
+        currentUser?.roles.includes("ROLE_MANAGER")) && (
         <Button
           color="error"
           onClick={() => deleteStudent.mutateAsync(student.id)}
         >
           Delete
         </Button>
+        )}
       </CardActions>
     </Card>
   );

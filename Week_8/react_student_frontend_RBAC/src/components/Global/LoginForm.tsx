@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useAccount } from './useAccount'
-import { Box, Button, Paper, TextField, Typography } from '@mui/material';
+import { Alert, Box, Button, Paper, TextField, ToggleButton, ToggleButtonGroup, Typography } from '@mui/material';
 import { LockOpen } from '@mui/icons-material';
 import type { LoginCreds } from '../../types';
 import { useLocation, useNavigate } from 'react-router';
@@ -9,7 +9,9 @@ function LoginForm() {
 
     const navigate = useNavigate()
     const location = useLocation();
-    const { loginUser } = useAccount();
+    const { loginUser, registerUser } = useAccount();
+    const [mode, setMode] = useState<'login' | 'register'>('login');
+    const [registrationComplete, setRegistrationComplete] = useState(false);
 
     const onSubmit = async (event: React.SubmitEvent) => {
         event.preventDefault();
@@ -20,6 +22,13 @@ function LoginForm() {
         formData.forEach((value, key) => {
         data[key] = value;
         });
+
+        if (mode === 'register') {
+            await registerUser.mutateAsync(data as unknown as LoginCreds);
+            setRegistrationComplete(true);
+            setMode('login');
+            return;
+        }
 
         await loginUser.mutateAsync(data as unknown as LoginCreds, {
             onSuccess: () => {
@@ -53,16 +62,41 @@ function LoginForm() {
         }}
         >
             <LockOpen fontSize='large'/>
-            <Typography variant='h4'>Sign in</Typography>
+            <Typography variant='h4'>{mode === 'login' ? 'Sign in' : 'Create account'}</Typography>
         </Box>
 
-        <TextField label="Email" name="email"/>
+        <ToggleButtonGroup
+            value={mode}
+            exclusive
+            onChange={(_, value: 'login' | 'register' | null) => {
+                if (value) {
+                    setMode(value);
+                    setRegistrationComplete(false);
+                }
+            }}
+            aria-label="Authentication mode"
+            fullWidth
+        >
+            <ToggleButton value="login">Login</ToggleButton>
+            <ToggleButton value="register">Register</ToggleButton>
+        </ToggleButtonGroup>
+
+        {registrationComplete && (
+            <Alert severity="success">Registration successful. Sign in with your new account.</Alert>
+        )}
+
+        <TextField label="Username" name="userName"/>
 
         <TextField label="Password" name="password" type='password'/>
 
-        <Button type='submit' variant='contained'>
-            Login
+        <Button
+            type='submit'
+            variant='contained'
+            disabled={loginUser.isPending || registerUser.isPending}
+        >
+            {mode === 'login' ? 'Login' : 'Register'}
         </Button>
+        
     </Paper>
   )
 }
