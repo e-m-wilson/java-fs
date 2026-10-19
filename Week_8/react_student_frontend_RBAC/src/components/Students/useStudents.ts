@@ -2,7 +2,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import type { Student } from "../../types";
 import agent from "../Global/agent";
 import { useLocation } from "react-router";
-//import { useAccount } from "../Global/useAccount";
 
 type StudentInput = Omit<Student, "id">;
 
@@ -13,7 +12,6 @@ type StudentInput = Omit<Student, "id">;
 //type StudentUpdateInput = Partial<Omit<Student, "id" | "createdAt">>;
 
 export const useStudents = (id?: string) => {
-  //const { currentUser } = useAccount();
   const queryClient = useQueryClient();
   const location = useLocation();
 
@@ -33,7 +31,7 @@ export const useStudents = (id?: string) => {
       const response = await agent.get<Student>(`/students/${id}`);
       return response.data;
     },
-    enabled: !!id //&& !!currentUser,
+    enabled: !!id,
   });
 
   const updateStudent = useMutation({
