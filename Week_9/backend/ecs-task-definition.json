@@ -1,0 +1,35 @@
+{
+  "family": "aws-angular-java-app",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "512",
+  "memory": "1024",
+  "containerDefinitions": [
+    {
+      "name": "app",
+      "image": "IMAGE_PLACEHOLDER",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+      "environment": [
+        {
+          "name": "SERVER_SERVLET_SESSION_COOKIE_SECURE",
+          "value": "true"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/aws-angular-java-app",
+          "awslogs-region": "REGION_PLACEHOLDER",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

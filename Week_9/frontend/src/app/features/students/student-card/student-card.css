@@ -1,0 +1,11 @@
+mat-card {
+    margin: 50px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    margin: 5px;
+}

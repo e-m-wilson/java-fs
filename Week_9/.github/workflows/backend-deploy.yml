@@ -1,0 +1,138 @@
+# Deploy the Spring Boot backend to AWS ECS whenever the backend code or this workflow changes.
+name: Deploy backend
+
+# This workflow runs automatically on pushes to main, but it only triggers when files inside backend/ or this workflow itself change.
+# It also supports manual runs from the GitHub Actions UI via workflow_dispatch.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-deploy.yml"
+  workflow_dispatch:
+
+# Grant the minimal GitHub permissions required for this deployment:
+# - contents: read lets GitHub check out the repository.
+# - id-token: write allows OIDC authentication to AWS so the workflow can assume an IAM role without storing AWS keys.
+permissions:
+  contents: read
+  id-token: write
+
+# Prevent overlapping production deployments for the backend service.
+# cancel-in-progress: false means a currently running deploy will finish before the next one starts.
+concurrency:
+  group: backend-production
+  cancel-in-progress: false
+
+# if you want to pull vars or secrets from a specific github repo environment you 
+# can do this (otherwise it will use the repo-level variables):
+# jobs:
+#   deploy:
+#     environment: production
+#     runs-on: ubuntu-latest
+jobs:
+  # One job handles the full release lifecycle: validate, package, push, and update ECS.
+  deploy:
+    # Run the workflow on GitHub's hosted Ubuntu virtual machine.
+    runs-on: ubuntu-latest
+    steps:
+      # Download the repository contents so the workflow can access the backend source and deployment files.
+      - uses: actions/checkout@v4
+
+      # Install Java 17 so the Spring Boot project can compile and the Maven wrapper can run.
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          # Use the Temurin distribution of OpenJDK. this is a lightweight jdk
+          distribution: temurin
+          # This project targets Java 17.
+          java-version: 17
+          # Cache Maven dependencies to speed up future builds.
+          cache: maven
+          # Cache uses the backend pom.xml as the dependency lock file.
+          cache-dependency-path: backend/pom.xml
+
+      # Execute the backend test suite before building and deploying the application.
+      - name: Run backend tests
+        # Run Maven from the backend directory so it uses the correct pom.xml.
+        working-directory: backend
+        run: bash ./mvnw -B test -Dspring.profiles.active=test
+ 
+      # Authenticate to AWS using GitHub OIDC and the repository variable for the role ARN.
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # The IAM role that the workflow assumes for AWS access.
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          # The AWS region to use for ECR and ECS operations.
+          aws-region: ${{ vars.AWS_REGION }}
+
+      # Log in to Amazon ECR so Docker can push the backend image to the registry.
+      - name: Log in to Amazon ECR
+        # Store the registry URL for later steps.
+        id: ecr
+        uses: aws-actions/amazon-ecr-login@v2
+
+      # Build the Docker image from the backend source and push it to ECR.
+      - name: Build and push image
+        # Capture the final image URI as an output for the ECS task definition step.
+        id: image
+        env:
+          # The AWS ECR registry URL produced by the login action.
+          REGISTRY: ${{ steps.ecr.outputs.registry }}
+          # The ECR repository name defined in GitHub variables.
+          ECR_REPOSITORY: ${{ vars.ECR_REPOSITORY }}
+          # Use the Git commit SHA as the image version, making each deploy traceable.
+          IMAGE_TAG: ${{ github.sha }}
+        
+        # Build the backend container image using the Dockerfile in the backend folder.
+        # Push the image to the configured ECR repository.
+        # Expose the full image URI to later workflow steps via GITHUB_OUTPUT.
+        run: |
+          docker build --file backend/Dockerfile --tag "$REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" backend
+          docker push "$REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+          echo "uri=$REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> "$GITHUB_OUTPUT"
+
+      # Prepare a new ECS task definition that points to the latest image and pulls database secrets from AWS Secrets Manager.
+      - name: Prepare ECS task definition
+        env:
+          # The image URI generated in the previous step.
+          IMAGE_URI: ${{ steps.image.outputs.uri }}
+          # AWS region for the ECS task definition logging configuration.
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          # ECS execution role ARN that allows the container to pull the image and send logs.
+          ECS_TASK_EXECUTION_ROLE_ARN: ${{ vars.ECS_TASK_EXECUTION_ROLE_ARN }}
+          # Secrets Manager ARN containing the DB connection values.
+          DATABASE_SECRET_ARN: ${{ vars.DATABASE_SECRET_ARN }}
+          # Host URL for RDS SQL server, provided via github variable; 
+          DB_HOST: ${{ vars.DB_HOST }}
+        # jq updates the JSON task definition in place so the image and secrets match this deployment.
+        run: |
+          jq \
+            --arg image "$IMAGE_URI" \
+            --arg region "$AWS_REGION" \
+            --arg executionRole "$ECS_TASK_EXECUTION_ROLE_ARN" \
+            --arg dbHost "$DB_HOST" \
+            --arg databaseSecret "$DATABASE_SECRET_ARN" \
+            '.executionRoleArn = $executionRole
+             | .containerDefinitions[0].image = $image
+             | .containerDefinitions[0].logConfiguration.options["awslogs-region"] = $region
+             | .containerDefinitions[0].environment += [{name: "DB_HOST", value: $dbHost}]
+             | .containerDefinitions[0].secrets = [
+                 {name: "DB_USERNAME", valueFrom: ($databaseSecret + ":username::")},
+                 {name: "DB_PASSWORD", valueFrom: ($databaseSecret + ":password::")}
+               ]' \
+            backend/ecs-task-definition.json > task-definition.json
+
+      # Update the ECS service with the revised task definition so the new container image is deployed.
+      - name: Deploy to Amazon ECS
+        uses: aws-actions/amazon-ecs-deploy-task-definition@v2
+        with:
+          # The generated task definition file to register and deploy.
+          task-definition: task-definition.json
+          # ECS cluster containing the backend service.
+          cluster: ${{ vars.ECS_CLUSTER }}
+          # The service that should receive the updated task definition.
+          service: ${{ vars.ECS_SERVICE }}
+          # Wait until the ECS service is stable before marking the workflow successful.
+          wait-for-service-stability: true

@@ -1,0 +1,91 @@
+# Deploy the Angular frontend to S3 and invalidate the CloudFront cache after a successful build.
+name: Deploy frontend
+
+# This workflow runs automatically on pushes to main when frontend code or the workflow file changes.
+# It can also be triggered manually from the GitHub Actions user interface
+on:
+  push:
+    branches: [main]
+    paths:
+      - "frontend/**"
+      - ".github/workflows/frontend-deploy.yml"
+  workflow_dispatch:
+
+# Grant the permissions required for repository access and AWS authentication through OIDC.
+permissions:
+  contents: read
+  id-token: write
+
+# Ensure only one production frontend deployment is active at a time.
+# cancel-in-progress: true means older deployments are canceled if a newer one begins.
+#                     false means a currently running deploy will finish before the next one starts 
+concurrency:
+  group: frontend-production
+  cancel-in-progress: false
+
+# if you want to pull vars or secrets from a specific github repo environment you 
+# can do this (otherwise it will use the repo-level variables):
+# jobs:
+#   deploy:
+#     environment: production
+#     runs-on: ubuntu-latest
+jobs:
+  # One job handles the full release process for the Angular app.
+  deploy:
+    # Execute on GitHub's Ubuntu runner.
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        # Run every shell command from the frontend folder so relative paths resolve correctly.
+        working-directory: frontend
+    steps:
+      # Fetch the repository contents so the app can be built in the workflow environment.
+      - uses: actions/checkout@v4
+
+      # Set up Node.js and restore cached dependencies for faster npm installs.
+      - uses: actions/setup-node@v4
+        with:
+          # Use the Node version required by the Angular toolchain.
+          node-version: 22
+          # Cache npm packages using the package-lock.json file.
+          cache: npm
+          # Path to the lockfile used by the cache.
+          cache-dependency-path: frontend/package-lock.json
+
+      # Install dependencies exactly as locked in package-lock.json for reproducible builds.
+      - run: npm ci
+
+      # Run the frontend test suite before publishing the production build.
+      - name: Run frontend tests
+        run: npm test -- --watch=false
+
+      # Create the production-ready static assets for the Angular application.
+      - run: npm run build
+
+      # Authenticate to AWS using the repository's OIDC role instead of storing long-lived credentials.
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          # IAM role that has permission to write to S3 and update CloudFront.
+          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
+          # AWS region for deployment resources.
+          aws-region: ${{ vars.AWS_REGION }}
+
+      # Upload the built static files to the S3 bucket that hosts the frontend.
+      - name: Upload site to S3
+        env:
+          # S3 bucket name configured as a GitHub Actions variable.
+          S3_BUCKET: ${{ vars.FRONTEND_BUCKET }}
+        
+        # Copy the production build output into the S3 bucket and remove files that are no longer present.
+        # Force the index.html file to be re-fetched by browsers by setting no-cache headers.
+        run: |
+          aws s3 sync dist/student_management/browser/ "s3://${S3_BUCKET}/" --delete
+          aws s3 cp dist/student_management/browser/index.html "s3://${S3_BUCKET}/index.html" \
+            --cache-control "no-cache, no-store, must-revalidate"
+
+      # Invalidate the CDN cache so users see the newest deployed frontend immediately.
+      - name: Invalidate CloudFront
+        env:
+          # CloudFront distribution ID for the production site.
+          DISTRIBUTION_ID: ${{ vars.CLOUDFRONT_DISTRIBUTION_ID }}
+        run: aws cloudfront create-invalidation --distribution-id "$DISTRIBUTION_ID" --paths "/*"

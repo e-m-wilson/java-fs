@@ -1,0 +1,80 @@
+{
+  // This ECS task definition describes the backend Spring Boot app deployed in AWS Fargate.
+  // It is the runtime config for the container built from backend/Dockerfile and should be
+  // used alongside the app's deployment notes in DEPLOYMENT.md and the Spring configuration files.
+  // The frontend in frontend/ is a separate Angular app and is not defined here.
+
+  // Name used by ECS to identify this task definition family.
+  "family": "aws-angular-java-app",
+
+  // awsvpc is required for Fargate tasks so each container gets its own elastic network interface.
+  // This allows the app to be exposed through the AWS load balancer/service setup in the deployment flow.
+  "networkMode": "awsvpc",
+
+  // Declares that this task can run on AWS Fargate rather than EC2.
+  "requiresCompatibilities": ["FARGATE"],
+
+  // CPU and memory allocated to the task for the Spring Boot backend container.
+  // This must be sized to match the Java app workload and Docker image resource needs.
+  "cpu": "512",
+  "memory": "1024",
+
+  // A task can contain one or more containers; this file defines the single app container
+  // that runs the Java API and serves traffic on port 8080.
+  "containerDefinitions": [
+    {
+      // Logical container name used by ECS and logs.
+      "name": "app",
+
+      // Replace IMAGE_PLACEHOLDER with the actual ECR image URI or repository tag for the built backend image.
+      // The image is typically produced from backend/Dockerfile and pushed to a registry before deployment.
+      // (set with jq in the backend-deploy.yml)
+      "image": "IMAGE_PLACEHOLDER",
+
+      // Essential means this container is required for the task to run successfully.
+      // If the Java app exits, ECS will restart or fail the task depending on the service configuration.
+      "essential": true,
+
+      // Exposes the app's in-container port to the task network.
+      // The backend app listens on 8080, which matches the Spring Boot default and the Dockerfile setup.
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080,
+          "protocol": "tcp"
+        }
+      ],
+
+      // Environment variables passed into the JVM/Spring application at runtime.
+      // Here, session cookies are forced to secure mode so they only transmit over HTTPS.
+      // This aligns with the app's AWS deployment security posture and front-end/backend HTTPS setup.
+      "environment": [
+        {
+          "name": "SERVER_SERVLET_SESSION_COOKIE_SECURE",
+          "value": "true"
+        },
+        // this isn't present in the un-commented version of the file, but 
+        // will be set via jq in 'backend-deploy.yml'
+        {"name": "DB_HOST", "value": $dbHost}
+      ],
+
+      // CloudWatch logging integration for the app container.
+      // awslogs-group should match the log group created for this ECS service, and awslogs-region
+      // should be the AWS region where the service is deployed (set with jq in the backend-deploy.yml)
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/aws-angular-java-app",
+          "awslogs-region": "REGION_PLACEHOLDER",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
+      // this isn't in the ecs-task-definition.json file 
+      // this will be set via jq in the backend-deploy.yml 
+      "secrets":[
+                 {"name": "DB_USERNAME", "valueFrom": ($databaseSecret + ":username::")},
+                 {"name": "DB_PASSWORD", "valueFrom": ($databaseSecret + ":password::")}
+               ]
+    }
+  ]
+}
