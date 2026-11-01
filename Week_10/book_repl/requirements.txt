@@ -1,0 +1,6 @@
+jupyter
+ipykernel
+numpy
+pandas
+matplotlib
+pretty-tables
