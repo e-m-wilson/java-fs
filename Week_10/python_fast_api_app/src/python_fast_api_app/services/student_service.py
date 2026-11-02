@@ -11,3 +11,6 @@ class StudentService:
 
     def get_student(self, student_id: int) -> Student | None:
         return self.repo.get_by_id(student_id)
+
+    def get_students_by_name(self, name: str) -> list[Student]:
+        return self.repo.get_by_name(name)

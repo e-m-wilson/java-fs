@@ -1,4 +1,6 @@
+from sqlalchemy import select
 from sqlalchemy.orm import Session
+
 from python_fast_api_app.domain.student import Student
 from python_fast_api_app.repositories.student_repo import StudentRepositoryProtocol
 
@@ -9,6 +11,10 @@ class SqlAlchemyStudentRepository(StudentRepositoryProtocol):
 
     def get_by_id(self, student_id: int) -> Student | None:
         return self.session.get(Student, student_id)
+
+    def get_by_name(self, name: str) -> list[Student]:
+        statement = select(Student).where(Student.name == name)
+        return self.session.scalars(statement).all()
 
     def add_student(self, student: Student) -> Student:
         self.session.add(student)
