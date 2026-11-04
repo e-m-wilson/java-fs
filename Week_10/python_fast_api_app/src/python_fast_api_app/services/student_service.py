@@ -1,7 +1,6 @@
 from python_fast_api_app.domain.student import Student
 from python_fast_api_app.repositories.student_repo import StudentRepositoryProtocol
 
-
 class StudentService:
     def __init__(self, repo: StudentRepositoryProtocol):
         self.repo = repo

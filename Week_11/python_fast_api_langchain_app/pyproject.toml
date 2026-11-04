@@ -1,0 +1,28 @@
+[project]
+name = "python-fast-api-langchain-app"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Ethan Wilson", email = "ethanwilson1991@gmail.com" }
+]
+requires-python = "==3.13.17"
+dependencies = [
+    "alembic>=1.20.1",
+    "fastapi>=0.162.0",
+    "langchain>=1.4.8",
+    "langchain-ollama>=1.1.0",
+    "psycopg[binary]>=3.3.6",
+    "pydantic>=2.14.2",
+    "python-dotenv>=1.2.4",
+    "sqlalchemy>=2.1.6",
+    "sqlalchemy-utils>=0.43.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+python-fast-api-langchain-app = "python_fast_api_langchain-app:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"

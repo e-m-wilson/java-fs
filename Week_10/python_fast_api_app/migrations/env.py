@@ -10,7 +10,7 @@ from alembic import context
 from src.python_fast_api_app.settings import settings
 # could do one by one like the following, for each domain model
 # or could use a __init__.py file to bring in all at once with just import src.something.domain
-import python_fast_api_app.domain.student
+import python_fast_api_app.domain
 from python_fast_api_app.base import Base
 
 # this is the Alembic Config object, which provides

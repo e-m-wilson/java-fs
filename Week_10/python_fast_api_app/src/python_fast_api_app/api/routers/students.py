@@ -10,18 +10,15 @@ from python_fast_api_app.services.student_service import StudentService
 
 router = APIRouter(prefix="/students", tags=["students"])
 
-
 def get_student_repository(
     session: Session = Depends(get_db),
 ) -> StudentRepositoryProtocol:
     return SqlAlchemyStudentRepository(session)
 
-
 def get_student_service(
     repo: StudentRepositoryProtocol = Depends(get_student_repository),
 ) -> StudentService:
     return StudentService(repo)
-
 
 @router.post(
     "",
@@ -34,7 +31,7 @@ def add_student(
 ) -> Student:
     return service.add_student(student.name)
 
-
+# route param: http://localhost:8000/students/1
 @router.get("/{student_id}", response_model=StudentRead)
 def get_student(
     student_id: int,
@@ -48,7 +45,7 @@ def get_student(
         )
     return student
 
-
+# query param: http://localhost:8000/students?name=Test
 @router.get("", response_model=list[StudentRead])
 def get_students_by_name(
     name: str = Query(min_length=1, max_length=100),
