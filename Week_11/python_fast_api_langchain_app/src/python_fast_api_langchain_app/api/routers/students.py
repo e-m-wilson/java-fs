@@ -6,7 +6,7 @@ from python_fast_api_langchain_app.db.deps import get_db
 from python_fast_api_langchain_app.domain.student import Student
 from python_fast_api_langchain_app.repositories.sqlalchemy_student_repo import SqlAlchemyStudentRepository
 from python_fast_api_langchain_app.repositories.student_repo import StudentRepositoryProtocol
-from python_fast_api_langchain_app.services.llm_service import LlmService
+from python_fast_api_langchain_app.services.llm_service_v2 import LlmService
 from python_fast_api_langchain_app.services.student_service import StudentService
 
 from langchain_core.language_models import BaseChatModel

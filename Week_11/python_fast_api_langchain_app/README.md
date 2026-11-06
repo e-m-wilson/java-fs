@@ -53,6 +53,48 @@ Body:
 Interactive API documentation is available at
 `http://127.0.0.1:8000/docs`.
 
+## Document RAG
+
+The document endpoints accept `.txt`, `.pdf`, and `.docx` files, split their text
+into chunks, and persist the chunks and Ollama embeddings in Chroma. By default,
+the Chroma database is stored in `./data/chroma`. Set
+`CHROMA_PERSIST_DIRECTORY` to change this location.
+
+The app uses `OLLAMA_MODEL` for answers and `OLLAMA_EMBEDDING_MODEL` for document
+embeddings. Defaults are `lfm3` and `qwen3-embedding:0.6b`, respectively; both
+models must be available from the server at `OLLAMA_BASE_URL`. Pull the models
+with Ollama before starting the app:
+
+```powershell
+ollama pull lfm3
+ollama pull qwen3-embedding:0.6b
+```
+
+Keep the embedding model the same for indexing and search; if you change it
+after ingesting documents, use a fresh Chroma directory and re-upload those
+documents.
+
+Upload a document:
+```
+POST http://localhost:8000/documents/upload
+Content-Type: multipart/form-data
+
+file=<your document>
+```
+
+Ask a question about uploaded documents:
+```
+POST http://localhost:8000/documents/chat
+
+Body:
+{
+  "question": "What does the document say about ...?"
+}
+```
+
+The answer includes the relevant source chunks. If no documents have been
+ingested, the service reports that it does not have enough information.
+
 Ask a question about the student records currently stored in the database:
 ```
 POST http://localhost:8000/students/ask
