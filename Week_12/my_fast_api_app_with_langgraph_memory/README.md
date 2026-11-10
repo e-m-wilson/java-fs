@@ -3,6 +3,7 @@
 Run the API from the project root with:
 
 ```powershell
+uv sync # (if first time setup and you just pulled this from github)
 uv run uvicorn my_fast_api_app_with_langgraph_memory.api.main:app --reload
 ```
 
@@ -37,6 +38,14 @@ to continue and provide a stable user ID to enable long-term memory:
 
 Subsequent requests should send `"conversation_id": "<id-from-the-response>"`.
 `user_id` is an application-supplied scope, not an authenticated identity. Before
-exposing these endpoints to untrusted clients, derive it from your authentication
-system rather than trusting a caller-provided ID. Chat messages and saved profiles
-are persisted in PostgreSQL; choose retention and backup policies accordingly.
+exposing these endpoints to untrusted clients, we should derive it from an authentication
+system rather than trusting a caller-provided ID. (But we will anyway since we haven't implemented auth/security topics in this project/curriculum) Chat messages and saved profiles
+are persisted in PostgreSQL; We haven't implemented any retention and backup policies, so by default, all short/long term memory is saved indefinitely as it is. 
+
+## Files to note:
+1. main.py = Implements a graph from our terminal function inside of 'memory.py' 
+  - Here we use PostgresSaver & PostgresStore to help initialize a checkpointer and store, respectively 
+  - The 'setup()' methods push necessary table migrations for each of these to our DB
+2. memory.py = contains our terminal function that builds our graph and sets up nodes + edges 
+3. documents.py = Here we have '/memory' endpoints to manage long-term user context. We also have '/chat/ endpoint that passes an instance of our memory graph to our service layer 'retrieval.py' file 
+4. retrieval.py = answers user questions; Keeps a thread's checkpoint history scoped to the supplied user when available.
