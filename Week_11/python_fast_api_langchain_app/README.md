@@ -25,7 +25,10 @@ Ollama server, so keep the base URL pointed at a server you trust.
 
 ## Run the app
 
-From this directory:
+Before running uv commands, just note that you don't want to run them from within your venv. Some vscode plugins will try to automatically start your venv, so deactivate before running any uv commands:
+![alt text](image.png)
+
+Then, from the main directory:
 
 ```powershell
 uv sync

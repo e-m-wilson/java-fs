@@ -5,6 +5,9 @@ This project demo assumes you have Postgres running in a local docker container.
 docker run --name python-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Password123! -e POSTGRES_DB=student_tracker -p 5432:5432 -d postgres:17
 ```
 
+Before running uv commands, just note that you don't want to run them from within your venv. Some vscode plugins will try to automatically start your venv, so deactivate before running any uv commands:
+![alt text](image.png)
+
 Run the API from the project root with:
 
 ```powershell
