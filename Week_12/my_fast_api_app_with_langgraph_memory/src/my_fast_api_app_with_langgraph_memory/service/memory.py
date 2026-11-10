@@ -1,3 +1,10 @@
+# This module defines a small LangGraph chat workflow for RAG-style conversations.
+# The graph keeps the normal message history from LangGraph, adds a retrieved
+# document context string, and also loads a durable per-user profile from the
+# shared store. In other words: each turn can answer using both current document
+# context and prior user memory, while the graph also tries to update that memory
+# after the answer is generated.
+
 from langchain_core.language_models import BaseChatModel
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_core.runnables import RunnableConfig
@@ -7,6 +14,9 @@ from langgraph.graph.state import CompiledStateGraph
 from langgraph.store.base import BaseStore
 
 
+# The state extends LangGraph's default message state with two custom fields:
+# - context: the document chunks or retrieved text for the current question
+# - long_term_memory: the previously saved summary for this user
 class ChatState(MessagesState):
     context: str
     long_term_memory: str
@@ -17,6 +27,9 @@ def build_memory_graph(
     checkpointer: BaseCheckpointSaver,
     store: BaseStore,
 ) -> CompiledStateGraph:
+    # Step 1: load any durable memory associated with the current user.
+    # We scope memory by ("users", user_id) so separate users do not overwrite
+    # each other, while the same user can reuse the profile across multiple chats.
     def load_long_term_memory(
         state: ChatState,
         config: RunnableConfig,
@@ -33,6 +46,9 @@ def build_memory_graph(
             )
         }
 
+    # Step 2: produce the answer based on document context plus the loaded memory.
+    # The LLM is instructed to treat both sources as untrusted data and to rely on
+    # the documents for factual claims while only using memory for personalization.
     def answer(state: ChatState) -> dict[str, AIMessage]:
         if not state["context"]:
             return {
@@ -54,6 +70,9 @@ def build_memory_graph(
         )
         return {"messages": llm.invoke([system_message, *state["messages"]])}
 
+    # Step 3: save the latest user fact pattern back into the durable profile.
+    # This is intentionally conservative: only stable, explicit facts are kept, and
+    # the prompt is written to avoid storing sensitive or temporary data.
     def update_long_term_memory(
         state: ChatState,
         config: RunnableConfig,
@@ -63,6 +82,8 @@ def build_memory_graph(
         if not user_id or not configurable.get("remember", True):
             return {}
 
+        # Look back through the message list and pull the most recent HumanMessage.
+        # This is the new information we may want to summarize into profile memory.
         latest_user_message = next(
             (
                 message.content
@@ -74,6 +95,9 @@ def build_memory_graph(
         if not isinstance(latest_user_message, str):
             return {}
 
+        # Ask the LLM to rewrite the entire profile as a concise plain-text summary.
+        # This keeps memory small and easy to inspect while preserving previous facts
+        # unless the user explicitly corrected or removed them.
         update = llm.invoke(
             [
                 SystemMessage(
@@ -112,6 +136,9 @@ def build_memory_graph(
         )
         return {}
 
+    # Build the graph itself: START -> load memory -> answer -> update memory -> END.
+    # This is the production flow for a single conversation turn, and the compiled
+    # graph can be reused across requests
     builder = StateGraph(ChatState)
     builder.add_node("load_long_term_memory", load_long_term_memory)
     builder.add_node("answer", answer)

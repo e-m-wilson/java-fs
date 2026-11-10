@@ -45,6 +45,8 @@ def answer_from_documents(
             }
         },
     )
+    # invoke() returns the graph's final state; "messages" is its ordered conversation history.
+    # The answer node adds an AIMessage at the end, so [-1] selects the latest assistant reply.
     answer = result["messages"][-1].content
     if not isinstance(answer, str):
         raise TypeError("The chat model returned a non-text response.")

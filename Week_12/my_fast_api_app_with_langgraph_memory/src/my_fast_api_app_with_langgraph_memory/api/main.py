@@ -25,7 +25,7 @@ def _langgraph_database_url(database_url: str) -> str:
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    #application startup 
+    # Initialize shared clients and stores once for the lifetime of the app.
     app.state.llm = ChatOllama(
         model=settings.OLLAMA_MODEL,
         base_url=settings.OLLAMA_BASE_URL,
@@ -48,8 +48,11 @@ async def lifespan(app: FastAPI):
     )
 
     database_url = _langgraph_database_url(settings.DATABASE_URL)
+    # Keep both PostgreSQL context managers open while the app is serving
+    # requests. ExitStack lets us enter multiple resources in one block and
+    # closes them in reverse order after shutdown (or if startup raises).
     with ExitStack() as resources:
-        # LangGraph creates and migrates its own checkpoint and key/value tables.
+       
         checkpoint_connection = resources.enter_context(
             PostgresSaver.from_conn_string(database_url)
         )
@@ -59,11 +62,13 @@ async def lifespan(app: FastAPI):
                 ("langchain_core.messages.ai", "AIMessage"),
             ]
         )
+        # LangGraph creates and migrates its checkpoint tables.
         checkpoint_connection.setup()
 
         memory_store = resources.enter_context(
             PostgresStore.from_conn_string(database_url)
         )
+        # LangGraph creates and migrates its store tables.
         memory_store.setup()
 
         app.state.memory_store = memory_store
@@ -72,9 +77,11 @@ async def lifespan(app: FastAPI):
             checkpoint_connection,
             memory_store,
         )
+        # Yield control to FastAPI; the resources above remain open throughout
+        # the serving period and are closed when the lifespan resumes at shutdown.
         yield
 
-    # application shuts down
+    # Clear references after the database resources have been closed.
     app.state.llm = None
     app.state.embeddings = None
     app.state.vector_store = None
