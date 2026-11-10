@@ -3,7 +3,14 @@
 Run the API from the project root with:
 
 ```powershell
-uv sync # (if first time setup and you just pulled this from github)
+# 1. Download and install Python 3.13 managed by uv
+uv python install 3.13
+
+# 2. Create (or update) the project's .venv and install dependencies
+# (if first time setup and you just pulled this from github)
+uv sync --python 3.13 
+
+# Starts the application
 uv run uvicorn my_fast_api_app_with_langgraph_memory.api.main:app --reload
 ```
 
@@ -51,7 +58,7 @@ are persisted in PostgreSQL; We haven't implemented any retention and backup pol
 4. retrieval.py = answers user questions; Keeps a thread's checkpoint history scoped to the supplied user when available.
 
 
-## FOR MAC
+## FOR MAC (you shouldn't need this but here is a fallback)
 
 Some reported issues with running ```uv sync``` on mac. (maybe to do with m1 chips, I'm not sure)
 
