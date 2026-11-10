@@ -12,6 +12,11 @@ with the `student_tracker` database. Copy `.env.example` to `.env` and set
 DATABASE_URL=postgresql+psycopg://postgres:<your-password>@localhost:5432/student_tracker
 ```
 
+Starting Postgres in the docker container:
+```
+docker run --name python-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Password123! -e POSTGRES_DB=student_tracker -p 5432:5432 -d postgres:17
+```
+
 The student-question endpoint sends the current student IDs and names to Ollama
 as context. By default, Ollama must be running on the same machine at
 `http://localhost:11434` with the `lfm3` model available. Change `OLLAMA_MODEL`

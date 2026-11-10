@@ -1,4 +1,9 @@
-# LangGraph memory
+# LangGraph memory demo
+
+This project demo assumes you have Postgres running in a local docker container. 
+```
+docker run --name python-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=Password123! -e POSTGRES_DB=student_tracker -p 5432:5432 -d postgres:17
+```
 
 Run the API from the project root with:
 
