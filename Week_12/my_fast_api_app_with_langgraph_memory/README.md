@@ -49,3 +49,23 @@ are persisted in PostgreSQL; We haven't implemented any retention and backup pol
 2. memory.py = contains our terminal function that builds our graph and sets up nodes + edges 
 3. documents.py = Here we have '/memory' endpoints to manage long-term user context. We also have '/chat/ endpoint that passes an instance of our memory graph to our service layer 'retrieval.py' file 
 4. retrieval.py = answers user questions; Keeps a thread's checkpoint history scoped to the supplied user when available.
+
+
+## FOR MAC
+
+Some reported issues with running ```uv sync``` on mac. (maybe to do with m1 chips, I'm not sure)
+
+I ran the following to generate a requirements.txt file from the 'uv.lock' file.
+```
+uv export --format requirements-txt --output-file requirements.txt
+```
+
+This will allow people on mac to install dependencies like so:
+```
+uv pip install -r requirements.txt
+```
+
+OR (with venv):
+```
+pip install -r requirements.txt
+```
