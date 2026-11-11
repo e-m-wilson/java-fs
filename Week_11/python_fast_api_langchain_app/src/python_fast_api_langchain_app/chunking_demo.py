@@ -1,7 +1,9 @@
 # You may need to install some packages to get this file to run
 # Packages needed just for this file (on top of packages required for the base project): langchain-experimental tiktoken
 # use 'uv sync' to get all packages from my pyproject.toml file 
-# Then run with:
+# This file also assumes you are using a local ollama embedding model, get it with:
+# ollama pull qwen3-embedding:0.6b
+# Then run the file with:
 # uv run ./src/python_fast_api_langchain_app/chunking_demo.py
 
 # fixed-size chunking:
