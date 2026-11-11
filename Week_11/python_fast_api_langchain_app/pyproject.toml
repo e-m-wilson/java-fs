@@ -24,6 +24,8 @@ dependencies = [
     "sqlalchemy>=2.1.6",
     "sqlalchemy-utils>=0.43.0",
     "uvicorn>=0.54.0",
+    "langchain-experimental>=0.4.2",
+    "tiktoken>=0.14.0",
 ]
 
 [project.scripts]
